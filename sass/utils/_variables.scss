@@ -1,12 +1,18 @@
 :root {
 	--main-font: "Space Grotesk", Tahoma, sans-serif;
-	// --font-size: 14px;
-	// --letter-spacing: 0.03em;
-	// --main-text-color: #000000;
-	// --title-color: #212121;
-	// --active-color: #2196f3;
-	// --bg-color-main: #fff;
-	// --bg-color-hero: #2f303a;
-	// --bg-color-section: #f5f4fa;
-	// --buttons-color: #f5f4fa;
+	--h1-font-size: 60px;
+	--h1-mob-font-size: 43px;
+	--h2-font-size: 40px;
+	--h2-mob-font-size: 36px;
+	--h3-font-size: 30px;
+	--h3-mob-font-size: 26px;
+	--h4-font-size: 20px;
+	--h4-mob-font-size: 18px;
+	--p-font-size: 18px;
+	--p-mob-font-size: 16px;
+	--p-mob-line-height: calc(24 / 16);
+	--main-text-color: #000000;
+	--main-bg-color: #191a23;
+	--active-color: #b9ff66;
+	--secondary-bg-color: #f3f3f3;
 }
