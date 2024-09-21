@@ -103,5 +103,10 @@
 <rect x="-826.721" y="-37.6172" width="1152.83" height="702.852" rx="45" fill="black"/>
 </g></symbol>
 <symbol id="icon-round" viewBox="0 0 48 47"><circle cx="24.0371" cy="23.5" r="23.5" fill="black"/></symbol>
+<symbol id="icon-burger" viewBox="0 0 44 32">
+<path stroke-linejoin="miter" stroke-linecap="round" stroke-miterlimit="4" stroke-width="3.3684" d="M1.684 3.043h40.421"></path>
+<path stroke-linejoin="miter" stroke-linecap="round" stroke-miterlimit="4" stroke-width="3.3684" d="M1.684 16.516h40.421"></path>
+<path stroke-linejoin="miter" stroke-linecap="round" stroke-miterlimit="4" stroke-width="3.3684" d="M1.684 29.99h40.421"></path>
+</symbol>
 </defs>
 </svg>
