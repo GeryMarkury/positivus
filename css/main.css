@@ -71,4 +71,43 @@ address {
 button {
   cursor: pointer;
   border: none;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 20px;
+}
+@media screen and (min-width: 430px) {
+  .container {
+    width: 430px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .container {
+    width: 1440px;
+  }
+}
+
+.nav {
+  display: grid;
+  grid-template-columns: 220px repeat(2, 1fr);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header {
+  padding-top: 30px;
+  padding-bottom: 40px;
+}
+@media screen and (min-width: 768px) {
+  .header {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }/*# sourceMappingURL=main.css.map */

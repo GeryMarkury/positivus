@@ -1,0 +1,5 @@
+.nav {
+	display: grid;
+	grid-template-columns: 220px repeat(2, 1fr);
+	align-items: center;
+}
