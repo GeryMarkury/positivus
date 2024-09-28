@@ -1,0 +1,11 @@
+.hero {
+	&__container {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 108px;
+	}
+
+	&__title {
+		font-size: var(--h1-font-size);
+	}
+}

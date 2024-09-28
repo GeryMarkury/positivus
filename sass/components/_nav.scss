@@ -1,5 +1,17 @@
 .nav {
 	display: grid;
-	grid-template-columns: 220px repeat(2, 1fr);
+	grid-template-columns: 220px auto;
+	gap: 209px;
 	align-items: center;
+
+	&__bar {
+		display: grid;
+		grid-template-columns: 5fr 1fr;
+	}
+
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		justify-items: center;
+	}
 }

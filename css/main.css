@@ -77,28 +77,27 @@ button {
   margin: 0 auto;
   padding: 0 20px;
 }
-@media screen and (min-width: 430px) {
-  .container {
-    width: 430px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .container {
-    width: 768px;
-  }
-}
-@media screen and (min-width: 1440px) {
-  .container {
-    width: 1440px;
-  }
-}
 
 .nav {
   display: grid;
-  grid-template-columns: 220px repeat(2, 1fr);
+  grid-template-columns: 220px auto;
+  gap: 209px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+.nav__bar {
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+}
+.nav__list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-items: center;
+}
+
+.section__title {
+  font-size: var(--h2-font-size);
 }
 
 .header {
@@ -107,7 +106,22 @@ button {
 }
 @media screen and (min-width: 768px) {
   .header {
-    padding-top: 0;
-    padding-bottom: 0;
+    padding-top: 60;
+    padding-bottom: 70;
   }
+}
+
+.hero__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 108px;
+}
+.hero__title {
+  font-size: var(--h1-font-size);
+}
+
+.clients__list {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 96px;
 }/*# sourceMappingURL=main.css.map */
