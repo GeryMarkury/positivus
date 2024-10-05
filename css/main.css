@@ -100,6 +100,13 @@ button {
   font-size: var(--h2-font-size);
 }
 
+.title-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 40px;
+}
+
 .header {
   padding-top: 30px;
   padding-bottom: 40px;
@@ -124,4 +131,68 @@ button {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 96px;
+}
+
+.services__list {
+  display: grid;
+  grid-template-columns: repeat(2, 600px);
+  grid-template-rows: repeat(3, 310px);
+  gap: 40px;
+}
+.services__item {
+  width: 600px;
+  height: 310px;
+}
+
+.proposal__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 168px;
+}
+
+.case__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 128px;
+}
+
+.team__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.contact__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 217px;
+}
+.contact__label {
+  display: block;
+}
+
+.footer__bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 155px;
+}
+.footer__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 155px;
+}
+.footer__list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 40px;
+}
+.footer__icons-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }/*# sourceMappingURL=main.css.map */

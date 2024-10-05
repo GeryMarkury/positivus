@@ -1,0 +1,23 @@
+.footer {
+	&__bar {
+		display: flex;
+		gap: 155px;
+	}
+
+	&__nav {
+		display: flex;
+		gap: 155px;
+	}
+
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		gap: 40px;
+	}
+
+	&__icons-container {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 20px;
+	}
+}

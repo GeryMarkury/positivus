@@ -1,0 +1,13 @@
+.services {
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(2, 600px);
+		grid-template-rows: repeat(3, 310px);
+		gap: 40px;
+	}
+
+	&__item {
+		width: 600px;
+		height: 310px;
+	}
+}
