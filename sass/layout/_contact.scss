@@ -7,4 +7,10 @@
 	&__label {
 		display: block;
 	}
+
+	&__btn {
+		@extend .button;
+		width: 556px;
+		padding: 20px auto;
+	}
 }

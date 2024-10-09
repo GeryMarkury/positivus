@@ -5,14 +5,15 @@
 	align-items: center;
 
 	&__bar {
-		display: grid;
-		grid-template-columns: 5fr 1fr;
+		display: flex;
+		gap: 40px;
 	}
 
 	&__list {
 		display: grid;
 		grid-template-columns: repeat(5, auto);
-		justify-items: center;
 		gap: 40px;
+		align-content: center;
+		font-size: var(--h4-font-size);
 	}
 }

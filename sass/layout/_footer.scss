@@ -21,4 +21,10 @@
 		grid-template-columns: repeat(3, 1fr);
 		gap: 20px;
 	}
+
+	&__btn {
+		@extend .button;
+		background-color: var(--active-color);
+		color: var(--main-text-color);
+	}
 }

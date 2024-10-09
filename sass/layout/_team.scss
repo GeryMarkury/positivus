@@ -7,4 +7,9 @@
 		grid-template-rows: repeat(2, 1fr);
 		gap: 40px;
 	}
+
+	&__btn {
+		@extend .button;
+		padding: 20px 76px;
+	}
 }
