@@ -9,7 +9,11 @@
 	}
 
 	&__item {
-		width: 600px;
-		height: 310px;
+		padding: 50px;
+	}
+
+	&__item-container {
+		display: flex;
+		justify-content: space-between;
 	}
 }
