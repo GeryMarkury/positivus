@@ -3,5 +3,9 @@
 
 	&__title {
 		font-size: var(--h2-font-size);
+		border-radius: 10px;
+		background-color: var(--active-color);
+		padding-left: 7px;
+		padding-right: 7px;
 	}
 }

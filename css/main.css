@@ -112,6 +112,10 @@ button {
 }
 .section__title {
   font-size: var(--h2-font-size);
+  border-radius: 10px;
+  background-color: var(--active-color);
+  padding-left: 7px;
+  padding-right: 7px;
 }
 
 .title-container {
@@ -120,13 +124,6 @@ button {
   display: flex;
   gap: 40px;
   margin-bottom: 80px;
-}
-
-.shape__title {
-  border-radius: 10px;
-  background-color: var(--active-color);
-  padding-left: 7px;
-  padding-right: 7px;
 }
 
 .button, .footer__btn, .contact__btn, .team__btn, .header__btn {
