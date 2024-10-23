@@ -257,8 +257,39 @@ details[open] summary::before {
   grid-template-rows: repeat(3, 310px);
   gap: 40px;
 }
+.services__list li:nth-child(2), .services__list li:nth-child(5) {
+  background-color: var(--active-color);
+}
+.services__list li:nth-child(3), .services__list li:nth-child(6) {
+  background-color: var(--main-bg-color);
+}
+.services__list li:nth-child(3) a, .services__list li:nth-child(6) a {
+  color: white;
+}
+.services__list li:nth-child(3) a div, .services__list li:nth-child(6) a div {
+  background-color: white;
+}
+.services__list li:nth-child(3) a div svg, .services__list li:nth-child(6) a div svg {
+  fill: var(--main-text-color);
+}
+.services__list li:nth-child(1) div h3 span, .services__list li:nth-child(4) div h3 span, .services__list li:nth-child(6) div h3 span {
+  background-color: var(--active-color);
+}
 .services__item {
+  position: relative;
   padding: 50px;
+  background-color: var(--secondary-bg-color);
+  border: 1px solid var(--main-bg-color);
+  border-radius: 45px;
+  -webkit-box-shadow: 0px 5px 0px rgb(0, 0, 0);
+          box-shadow: 0px 5px 0px rgb(0, 0, 0);
+}
+.services__item div h3 span {
+  font-size: var(--h3-font-size);
+  background-color: white;
+  padding-left: 7px;
+  padding-right: 7px;
+  border-radius: 7px;
 }
 .services__item-container {
   display: -webkit-box;
@@ -267,6 +298,36 @@ details[open] summary::before {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+.services__btn {
+  position: absolute;
+  bottom: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+  font-size: var(--h4-font-size);
+}
+.services__btn__circle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 41px;
+  height: 41px;
+  background-color: black;
+  border-radius: 50%;
+}
+.services__btn__svg {
+  fill: var(--active-color);
 }
 
 .proposal__container {
