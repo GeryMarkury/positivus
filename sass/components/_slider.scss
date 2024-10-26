@@ -1,0 +1,36 @@
+.slider-wrapper {
+	background-color: var(--main-bg-color);
+	border-radius: 45px;
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+	scroll-padding-inline: 300px;
+}
+
+.card-list {
+	display: grid;
+	grid-auto-flow: column;
+	gap: 50px;
+}
+
+.card-item {
+	width: 606px;
+	color: white;
+	padding-top: 84px;
+	margin-bottom: 124px;
+	position: relative;
+}
+
+.card-svg {
+	position: absolute;
+}
+
+blockquote {
+	margin: 0;
+}
+
+.card-text {
+	padding-top: 48px;
+	padding-left: 52px;
+	padding-right: 52px;
+	margin-bottom: 100px;
+}
