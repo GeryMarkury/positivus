@@ -210,21 +210,41 @@ details[open] summary::before {
   background-image: url("../../images/minus.png");
 }
 
-.slider-wrapper {
+blockquote {
+  margin: 0;
+}
+
+.slide-text {
+  padding-top: 48px;
+  padding-left: 52px;
+  padding-right: 52px;
+  margin-bottom: 100px;
+}
+
+.carousel-container {
   background-color: var(--main-bg-color);
   border-radius: 45px;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-  scroll-padding-inline: 300px;
 }
 
-.card-list {
-  display: grid;
-  grid-auto-flow: column;
+.carousel-track-container {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-track-container .carousel-track {
+  height: 100%;
+  /* width would be 100% times the number of the images used in the slider */
+  width: 500%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   gap: 50px;
+  -webkit-transition: 500ms ease-out;
+  transition: 500ms ease-out;
 }
 
-.card-item {
+.carousel-slide {
   width: 606px;
   color: white;
   padding-top: 84px;
@@ -232,19 +252,43 @@ details[open] summary::before {
   position: relative;
 }
 
-.card-svg {
+.slide-svg {
   position: absolute;
 }
 
-blockquote {
-  margin: 0;
+.carousel-action {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.card-text {
-  padding-top: 48px;
-  padding-left: 52px;
-  padding-right: 52px;
-  margin-bottom: 100px;
+.carousel-indicator {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.carousel-indicator .indicator-svg {
+  fill: white;
+  margin: 0 7px;
+  cursor: pointer;
+}
+
+.carousel-indicator .indicator-svg:hover {
+  fill: rgba(255, 255, 255, 0.7);
+}
+
+.carousel-indicator .indicator.active .indicator-svg {
+  fill: var(--active-color);
 }
 
 .header {
