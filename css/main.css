@@ -224,24 +224,35 @@ blockquote {
 .carousel-container {
   background-color: var(--main-bg-color);
   border-radius: 45px;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 68px;
 }
 
 .carousel-track-container {
   height: 100%;
   width: 100%;
   overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.carousel-track-container .carousel-track {
-  height: 100%;
-  /* width would be 100% times the number of the images used in the slider */
-  width: 500%;
+.carousel-track {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 50px;
-  -webkit-transition: 500ms ease-out;
-  transition: 500ms ease-out;
+  -webkit-transition: -webkit-transform 500ms ease-out;
+  transition: -webkit-transform 500ms ease-out;
+  transition: transform 500ms ease-out;
+  transition: transform 500ms ease-out, -webkit-transform 500ms ease-out;
 }
 
 .carousel-slide {
@@ -250,6 +261,8 @@ blockquote {
   padding-top: 84px;
   margin-bottom: 124px;
   position: relative;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 .slide-svg {
@@ -275,6 +288,7 @@ blockquote {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-top: 20px;
 }
 
 .carousel-indicator .indicator-svg {
@@ -289,6 +303,21 @@ blockquote {
 
 .carousel-indicator .indicator.active .indicator-svg {
   fill: var(--active-color);
+}
+
+.carousel-active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  width: 100%;
+  top: 50%;
 }
 
 .header {

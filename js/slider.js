@@ -1,93 +1,83 @@
-const slides = document.querySelectorAll(".carousel-slide");
-
+const slides = Array.from(document.querySelectorAll(".carousel-slide"));
 const carouselTrack = document.querySelector(".carousel-track");
-
 const nextBtn = document.querySelector("#next-btn");
 const prevBtn = document.querySelector("#prev-btn");
-
 const indList = document.querySelector(".carousel-indicator");
 
-let activeSlideIndex = 0;
+let activeSlideIndex = 1; // Start at 1 to account for the added clone
+let isTransitioning = false; // To control quick jump during wrap-around
+
+// Clone the first and last slides
+const firstClone = slides[0].cloneNode(true);
+const lastClone = slides[slides.length - 1].cloneNode(true);
+firstClone.classList.add("clone");
+lastClone.classList.add("clone");
+
+carouselTrack.appendChild(firstClone);
+carouselTrack.insertBefore(lastClone, slides[0]);
 
 const updateInd = () => {
-	let indicators = document.querySelectorAll(".indicator");
+	const indicators = document.querySelectorAll(".indicator");
 	indicators.forEach((el, idx) => {
 		el.classList.remove("active");
-		if (idx === activeSlideIndex) {
+		if (idx === (activeSlideIndex - 1) % slides.length) {
 			el.classList.add("active");
 		}
 	});
 };
 
-const moveSlide = dir => {
-	let imgWidth = slides[activeSlideIndex].clientWidth;
-	if (dir === "prev") {
-		if (activeSlideIndex > 0) {
-			activeSlideIndex--;
-		} else {
-			activeSlideIndex = slides.length - 1;
-		}
-	} else if (dir === "next") {
-		if (activeSlideIndex < slides.length - 1) {
-			activeSlideIndex++;
-		} else {
-			activeSlideIndex = 0;
-		}
-	}
-	carouselTrack.style.transform = `translateX(-${activeSlideIndex * imgWidth}px)`;
+const centerSlide = () => {
+	const slideWidth = slides[0].clientWidth;
+	const gap = 50; // The gap between slides
+	const offset = (carouselTrack.clientWidth - slideWidth) / 2;
+	const translateX = -((slideWidth + gap) * activeSlideIndex - offset);
+	carouselTrack.style.transform = `translateX(${translateX}px)`;
 	updateInd();
 };
 
-const moveSlides = idx => {
-	let diff = idx - activeSlideIndex;
-	if (diff >= 0) {
-		for (let i = 0; i < diff; i++) {
-			moveSlide("next");
-		}
-	} else {
-		diff *= -1;
-		for (let i = 0; i < diff; i++) {
-			moveSlide("prev");
-		}
+const moveSlide = dir => {
+	if (isTransitioning) return; // Prevent transitions during quick jump
+
+	if (dir === "prev") {
+		activeSlideIndex--;
+	} else if (dir === "next") {
+		activeSlideIndex++;
 	}
+	carouselTrack.style.transition = "transform 500ms ease-out";
+	centerSlide();
+
+	isTransitioning = true;
+	// Wrap around effect
+	carouselTrack.addEventListener("transitionend", () => {
+		isTransitioning = false;
+		if (activeSlideIndex === slides.length + 1) {
+			activeSlideIndex = 1;
+			carouselTrack.style.transition = "none"; // Disable transition for instant jump
+			centerSlide();
+		} else if (activeSlideIndex === 0) {
+			activeSlideIndex = slides.length;
+			carouselTrack.style.transition = "none";
+			centerSlide();
+		}
+	});
 };
 
-// const generateInd = () => {
-// 	for (let i = 0; i < slides.length; i++) {
-// 		let newItem = document.createElement("li");
-// 		newItem.classList.add("indicator");
-// 		newItem.setAttribute("data-index", i);
-// 		indList.appendChild(newItem);
-// 	}
-// 	updateInd();
-// };
+nextBtn.addEventListener("click", () => moveSlide("next"));
+prevBtn.addEventListener("click", () => moveSlide("prev"));
 
 indList.addEventListener("click", e => {
-	let target = e.target;
+	const target = e.target;
 	console.log(target);
 	if (target.classList.contains("indicator")) {
-		console.log(target.dataset.index);
-		moveSlides(target.dataset.index);
+		activeSlideIndex = parseInt(target.dataset.index, 10) + 1;
+		carouselTrack.style.transition = "transform 500ms ease-out";
+		centerSlide();
 	} else if (target.closest(".indicator")) {
-		moveSlides(target.closest(".indicator").dataset.index);
+		activeSlideIndex = parseInt(target.closest(".indicator").dataset.index, 10) + 1;
+		carouselTrack.style.transition = "transform 500ms ease-out";
+		centerSlide();
 	}
 });
 
-nextBtn.addEventListener("click", () => {
-	moveSlide("next");
-});
-prevBtn.addEventListener("click", () => {
-	moveSlide("prev");
-});
-
-window.addEventListener("keyup", e => {
-	if (e.keyCode === 37) {
-		moveSlide("prev");
-	} else if (e.keyCode === 39) {
-		moveSlide("next");
-	}
-});
-
-// document.addEventListener("DOMContentLoaded", () => {
-// 	generateInd();
-// });
+// Initialize center position on page load with first real slide
+centerSlide();
