@@ -29,7 +29,7 @@ overflow: hidden;
 .carousel-track {
 	display: flex;
 	gap: 50px;
-	transition: transform 500ms ease-out;
+	transition: transform 0.5s ease-in-out;
 }
 
 .carousel-slide {

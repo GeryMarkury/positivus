@@ -1,16 +1,13 @@
-// Variables and setup
 const carouselTrack = document.querySelector(".carousel-track");
 const originalSlides = Array.from(document.querySelectorAll(".carousel-slide"));
 let displaySlides = [];
 let currentIndex = 0;
 let isPaginating = false;
 
-// Initialize the carousel by setting up initial slides
 function initializeDisplaySlides() {
 	displaySlides = [];
 	const totalSlides = originalSlides.length;
 
-	// Add the center and surrounding slides
 	for (let i = -2; i <= 2; i++) {
 		const index = (currentIndex + i + totalSlides) % totalSlides;
 		const slideCopy = originalSlides[index].cloneNode(true);
@@ -28,7 +25,7 @@ function renderCarousel(applyAnimation = true) {
 		carouselTrack.style.transition = "transform 0.5s ease-in-out";
 	}
 
-	carouselTrack.innerHTML = ""; // Clear and re-render slides
+	carouselTrack.innerHTML = "";
 	displaySlides.forEach(slide => carouselTrack.appendChild(slide));
 
 	// Center the carousel on the main slide
@@ -45,7 +42,7 @@ function renderCarousel(applyAnimation = true) {
 // Center the carousel track on the active slide
 function centerCarousel() {
 	const slideWidth = displaySlides[2].clientWidth;
-	const gap = 50; // Adjust according to your CSS gap
+	const gap = 50;
 	const offset = (carouselTrack.clientWidth - slideWidth) / 2;
 	const translateX = -((slideWidth + gap) * 2 - offset);
 	carouselTrack.style.transform = `translateX(${translateX}px)`;
