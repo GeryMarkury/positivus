@@ -2,6 +2,16 @@ blockquote {
 	margin: 0;
 }
 
+cite {
+	color: var(--active-color);
+	font-size: var(--h4-font-size);
+	font-style: normal;
+}
+
+small {
+	font-size: var(--p-font-size);
+}
+
 .slide-text {
 	padding-top: 48px;
 	padding-left: 52px;

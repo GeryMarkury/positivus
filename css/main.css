@@ -214,6 +214,16 @@ blockquote {
   margin: 0;
 }
 
+cite {
+  color: var(--active-color);
+  font-size: var(--h4-font-size);
+  font-style: normal;
+}
+
+small {
+  font-size: var(--p-font-size);
+}
+
 .slide-text {
   padding-top: 48px;
   padding-left: 52px;
@@ -249,10 +259,10 @@ blockquote {
   display: -ms-flexbox;
   display: flex;
   gap: 50px;
-  -webkit-transition: -webkit-transform 500ms ease-out;
-  transition: -webkit-transform 500ms ease-out;
-  transition: transform 500ms ease-out;
-  transition: transform 500ms ease-out, -webkit-transform 500ms ease-out;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
 }
 
 .carousel-slide {

@@ -17,38 +17,28 @@ function initializeDisplaySlides() {
 	updateIndicator(); // Set initial indicator as active
 }
 
-// Render the display slides into the track
 function renderCarousel(applyAnimation = true) {
+	console.log("Applying animation:", applyAnimation);
 	if (!applyAnimation) {
 		carouselTrack.style.transition = "none";
+		console.log("Transition set to none");
 	} else {
 		carouselTrack.style.transition = "transform 0.5s ease-in-out";
+		console.log("Transition set to transform 0.5s ease-in-out");
 	}
 
 	carouselTrack.innerHTML = "";
 	displaySlides.forEach(slide => carouselTrack.appendChild(slide));
 
-	// Center the carousel on the main slide
-	centerCarousel();
-
 	if (!applyAnimation) {
 		// Restore transition after initial setup
 		setTimeout(() => {
 			carouselTrack.style.transition = "transform 0.5s ease-in-out";
+			console.log("Transition restored to transform 0.5s ease-in-out");
 		}, 50);
 	}
 }
 
-// Center the carousel track on the active slide
-function centerCarousel() {
-	const slideWidth = displaySlides[2].clientWidth;
-	const gap = 50;
-	const offset = (carouselTrack.clientWidth - slideWidth) / 2;
-	const translateX = -((slideWidth + gap) * 2 - offset);
-	carouselTrack.style.transform = `translateX(${translateX}px)`;
-}
-
-// Function to move slides with animation
 function moveSlide(direction) {
 	if (isPaginating) return;
 
@@ -69,10 +59,9 @@ function moveSlide(direction) {
 	}
 
 	renderCarousel(true);
-	updateIndicator(); // Update the active indicator
+	updateIndicator();
 }
 
-// Pagination to go to a specific slide
 function goToSlide(targetIndex) {
 	isPaginating = true;
 	const totalSlides = originalSlides.length;
@@ -86,18 +75,16 @@ function goToSlide(targetIndex) {
 	}
 
 	renderCarousel(true);
-	updateIndicator(); // Update the active indicator
+	updateIndicator();
 	isPaginating = false;
 }
 
-// Update the active indicator
 function updateIndicator() {
 	document.querySelectorAll(".indicator").forEach((indicator, index) => {
 		indicator.classList.toggle("active", index === currentIndex);
 	});
 }
 
-// Event listeners
 document.querySelector("#next-btn").addEventListener("click", () => moveSlide("next"));
 document.querySelector("#prev-btn").addEventListener("click", () => moveSlide("prev"));
 
@@ -105,5 +92,4 @@ document.querySelectorAll(".indicator").forEach((indicator, index) => {
 	indicator.addEventListener("click", () => goToSlide(index));
 });
 
-// Initialize
 initializeDisplaySlides();
