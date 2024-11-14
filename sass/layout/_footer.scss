@@ -1,7 +1,23 @@
 .footer {
+	&__container {
+		padding-top: 55px;
+		padding-bottom: 50px;
+		padding-left: 60px;
+		padding-right: 60px;
+		background-color: var(--main-bg-color);
+		color: #fff;
+		border-top-left-radius: 45px;
+		border-top-right-radius: 45px;
+	}
+
+	&__logo {
+		fill: #fff;
+	}
+
 	&__bar {
 		display: flex;
 		gap: 155px;
+		margin-bottom: 66px;
 	}
 
 	&__nav {
@@ -14,12 +30,40 @@
 		grid-template-columns: repeat(5, auto);
 		gap: 40px;
 		justify-items: center;
+		text-decoration: underline;
+	}
+
+	&__icon {
+		fill: var(--main-bg-color);
 	}
 
 	&__icons-container {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		gap: 20px;
+	}
+
+	&__icons-circle {
+		width: 30px;
+		height: 30px;
+		border-radius: 50px;
+		background-color: #fff;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__title {
+		border-radius: 7px;
+		background-color: var(--active-color);
+		padding-left: 7px;
+		padding-right: 7px;
+		display: inline;
+		color: black;
+	}
+
+	&__address-list {
+		margin-top: 27px;
 	}
 
 	&__btn {

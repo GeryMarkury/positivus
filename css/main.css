@@ -490,11 +490,25 @@ small {
   padding: 20px auto;
 }
 
+.footer__container {
+  padding-top: 55px;
+  padding-bottom: 50px;
+  padding-left: 60px;
+  padding-right: 60px;
+  background-color: var(--main-bg-color);
+  color: #fff;
+  border-top-left-radius: 45px;
+  border-top-right-radius: 45px;
+}
+.footer__logo {
+  fill: #fff;
+}
 .footer__bar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 155px;
+  margin-bottom: 66px;
 }
 .footer__nav {
   display: -webkit-box;
@@ -507,11 +521,41 @@ small {
   grid-template-columns: repeat(5, auto);
   gap: 40px;
   justify-items: center;
+  text-decoration: underline;
+}
+.footer__icon {
+  fill: var(--main-bg-color);
 }
 .footer__icons-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+}
+.footer__icons-circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.footer__title {
+  border-radius: 7px;
+  background-color: var(--active-color);
+  padding-left: 7px;
+  padding-right: 7px;
+  display: inline;
+  color: black;
+}
+.footer__address-list {
+  margin-top: 27px;
 }
 .footer__btn {
   background-color: var(--active-color);

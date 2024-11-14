@@ -1015,12 +1015,14 @@
 		</main>
 		<footer>
 			<div class="container">
+				<div class="footer__container">
 				<div class="footer__bar">
 					<nav class="footer__nav">
 						<a href="./index.html"
 							><svg
 								width="180"
 								height="29"
+								class="footer__logo"
 							>
 								<use href="./images/icons/symbol-defs.svg#icon-logo"></use></svg
 						></a>
@@ -1033,32 +1035,34 @@
 						</ul>
 					</nav>
 					<div class="footer__icons-container">
-						<svg
+						<div class="footer__icons-circle"><svg
 							width="15"
 							height="15"
+							class="footer__icon"
 						>
 							<use href="./images/icons/symbol-defs.svg#icon-linkedin"></use>
-						</svg>
+						</svg></div>
 						<svg
 							width="30"
 							height="30"
 						>
 							<use href="./images/icons/symbol-defs.svg#icon-facebook"></use>
 						</svg>
-						<svg
+						<div class="footer__icons-circle"><svg
 							width="18"
 							height="14"
+							class="footer__icon"
 						>
 							<use href="./images/icons/symbol-defs.svg#icon-twitter"></use>
-						</svg>
+						</svg></div>
 					</div>
 				</div>
-				<p>Contact us:</p>
+				<p class="footer__title">Contact us:</p>
 				<address>
-					<ul>
-						<li><a href="mailto:info@positivus.com">Email: info@devstudio.com</a></li>
-						<li><a href="tel:+5555678901">Phone: 555-567-8901</a></li>
-						<li><p>Address: 1234 Main St Moonstone City, Stardust State 12345</p></li>
+					<ul class="footer__address-list">
+						<li class="footer__address-list__item"><a href="mailto:info@positivus.com">Email: info@devstudio.com</a></li>
+						<li class="footer__address-list__item"><a href="tel:+5555678901">Phone: 555-567-8901</a></li>
+						<li class="footer__address-list__item"><p>Address: 1234 Main St Moonstone City, Stardust State 12345</p></li>
 					</ul>
 				</address>
 				<form name="signup-form">
@@ -1076,7 +1080,7 @@
 					</button>
 				</form>
 				<p>&#169; 2023 Positivus. All Rights Reserved.</p>
-				<a href="#">Privacy Policy</a>
+				<a href="#">Privacy Policy</a></div>
 			</div>
 		</footer>
 		<script src="./js/slider.js"></script>
