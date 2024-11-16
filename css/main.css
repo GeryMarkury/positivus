@@ -271,8 +271,6 @@ small {
   padding-top: 84px;
   margin-bottom: 124px;
   position: relative;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
 }
 
 .slide-svg {
