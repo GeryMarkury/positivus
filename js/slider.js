@@ -20,7 +20,6 @@ function initializeDisplaySlides() {
 }
 
 function renderCarousel(applyAnimation = true, translateX = 0) {
-    console.log("Rendering carousel...");
     if (!applyAnimation) carouselTrack.style.transition = "none";
     else carouselTrack.style.transition = "transform 0.5s ease-in-out";
 
@@ -77,29 +76,73 @@ function goToSlide(targetIndex) {
 
     const totalSlides = originalSlides.length;
     const indexDifference = targetIndex - currentIndex;
+    console.log(`Current Index: ${currentIndex}, Target Index: ${targetIndex}`);
+    console.log(`Index Difference: ${indexDifference}`);
 
-    // Calculate the total translation
-    const translateX = -indexDifference * slideWidth;
+    // Determine direction
+    const direction = indexDifference > 0 ? "forward" : "backward";
+    console.log(`Direction: ${direction}`);
 
-    // Animate the movement
-    renderCarousel(true, translateX);
-
-    setTimeout(() => {
-        // Build the displaySlides array dynamically
-        displaySlides = [];
-        for (let i = targetIndex - 2; i <= targetIndex + 2; i++) {
-            const index = (i + totalSlides) % totalSlides;
+    // Step 1: Build the pre-animation `displaySlides` array
+    displaySlides = [];
+    if (direction === "forward") {
+        // Moving forward: Add slides with extra on the right
+        for (let i = targetIndex - 2; i <= targetIndex + 2 + Math.abs(indexDifference); i++) {
+            const index = (i + totalSlides) % totalSlides; // Ensure valid index
             const slideCopy = originalSlides[index].cloneNode(true);
             displaySlides.push(slideCopy);
         }
+    } else {
+        // Moving backward: Add slides with extra on the left
+        for (let i = targetIndex - 2 - Math.abs(indexDifference); i <= targetIndex + 2; i++) {
+            const index = (i + totalSlides) % totalSlides; // Ensure valid index
+            const slideCopy = originalSlides[index].cloneNode(true);
+            displaySlides.push(slideCopy);
+        }
+    }
 
-        currentIndex = targetIndex;
+    console.log("Pre-animation displaySlides:", displaySlides.map(slide => slide.textContent.trim()));
 
-        resetCarousel(); // Reset transform
-        renderCarousel(false); // Update DOM without animation
-        updateIndicator();
-        isAnimating = false;
-    }, 500); // Match the animation duration
+    // Step 2: Render the updated slides (without animation)
+    renderCarousel(false);
+    console.log("Rendered updated slides before animation.");
+
+    // Step 3: Wait for rendering to complete, then start the animation
+    setTimeout(() => {
+        const translateX = -indexDifference * slideWidth;
+        console.log(`Starting animation with translateX: ${translateX}px`);
+        renderCarousel(true, translateX);
+
+        // Step 4: After animation, clean up the `displaySlides` array
+        setTimeout(() => {
+            console.log("Animation complete. Cleaning up slides...");
+
+            displaySlides = [];
+            for (let i = targetIndex - 2; i <= targetIndex + 2; i++) {
+                const index = (i + totalSlides) % totalSlides; // Ensure valid index
+                const slideCopy = originalSlides[index].cloneNode(true);
+                displaySlides.push(slideCopy);
+            }
+
+            console.log("Final displaySlides:", displaySlides.map(slide => slide.textContent.trim()));
+
+            // Step 5: Update state and reset
+            currentIndex = targetIndex;
+            console.log(`Updated Current Index: ${currentIndex}`);
+
+            resetCarousel(); // Reset transform
+            console.log("Carousel transform reset.");
+
+            renderCarousel(false); // Update DOM without animation
+            console.log("Re-rendered carousel without animation.");
+
+            updateIndicator(); // Update the indicator
+            console.log("Updated indicator.");
+
+            isAnimating = false;
+            console.log("Animation flag reset. Ready for next interaction.");
+        }, 1500); // Match the animation duration
+    }, 500); // Small delay to allow DOM updates before animation
 }
 
 function updateIndicator() {
