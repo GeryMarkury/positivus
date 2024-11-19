@@ -28,6 +28,7 @@ function renderCarousel(applyAnimation = true, translateX = 0) {
 
     // Apply transform
     carouselTrack.style.transform = `translateX(${translateX}px)`;
+    console.log(carouselTrack.style.transform);
 }
 
 function resetCarousel() {
@@ -87,14 +88,14 @@ function goToSlide(targetIndex) {
     displaySlides = [];
     if (direction === "forward") {
         // Moving forward: Add slides with extra on the right
-        for (let i = targetIndex - 2; i <= targetIndex + 2 + Math.abs(indexDifference); i++) {
+        for (let i = currentIndex - 2; i <= currentIndex + 2 + Math.abs(indexDifference); i++) {
             const index = (i + totalSlides) % totalSlides; // Ensure valid index
             const slideCopy = originalSlides[index].cloneNode(true);
             displaySlides.push(slideCopy);
         }
     } else {
         // Moving backward: Add slides with extra on the left
-        for (let i = targetIndex - 2 - Math.abs(indexDifference); i <= targetIndex + 2; i++) {
+        for (let i = currentIndex - 2 - Math.abs(indexDifference); i <= currentIndex + 2; i++) {
             const index = (i + totalSlides) % totalSlides; // Ensure valid index
             const slideCopy = originalSlides[index].cloneNode(true);
             displaySlides.push(slideCopy);
