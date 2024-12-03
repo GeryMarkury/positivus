@@ -1,4 +1,5 @@
 const carouselTrack = document.querySelector(".carousel-track");
+const carouselTrackContainer = document.querySelector(".carousel-track-container");
 const originalSlides = Array.from(document.querySelectorAll(".carousel-slide"));
 let displaySlides = [];
 let currentIndex = 0;
@@ -82,6 +83,8 @@ function goToSlide(targetIndex) {
 	displaySlides = [];
 	if (direction === "forward") {
 		// Moving forward: Add slides with extra on the right
+		carouselTrackContainer.style.justifyContent = "left";
+		carouselTrackContainer.style.marginLeft = "-959px";
 		for (let i = currentIndex - 2; i <= currentIndex + 2 + Math.abs(indexDifference); i++) {
 			const index = (i + totalSlides) % totalSlides; // Ensure valid index
 			const slideCopy = originalSlides[index].cloneNode(true);
@@ -89,6 +92,8 @@ function goToSlide(targetIndex) {
 		}
 	} else {
 		// Moving backward: Add slides with extra on the left
+		carouselTrackContainer.style.justifyContent = "right";
+		carouselTrackContainer.style.marginLeft = "959px";
 		for (let i = currentIndex - 2 - Math.abs(indexDifference); i <= currentIndex + 2; i++) {
 			const index = (i + totalSlides) % totalSlides; // Ensure valid index
 			const slideCopy = originalSlides[index].cloneNode(true);

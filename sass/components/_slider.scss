@@ -22,7 +22,7 @@ small {
 .carousel-container {
 	background-color: var(--main-bg-color);
 	border-radius: 45px;
-overflow: hidden;
+	overflow: hidden;
 	position: relative;
 	padding-bottom: 68px;
 }
@@ -30,10 +30,12 @@ overflow: hidden;
 .carousel-track-container {
 	height: 100%;
 	width: 100%;
-	overflow: hidden;
+	// overflow: hidden;
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	justify-content: left;
+	margin-left: -959px;
+	// justify-content: center;
+	// align-items: center;
 }
 
 .carousel-track {
