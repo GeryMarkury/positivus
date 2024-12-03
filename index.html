@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
@@ -738,8 +738,8 @@
 									</svg>
 									<blockquote>
 										<p class="slide-text">
-											"FIRST We have been working with Positivus FIRST for the past year and have seen a
-											significant increase in website traffic and leads as a result of their
+											"FIRST We have been working with Positivus FIRST for the past year and have
+											seen a significant increase in website traffic and leads as a result of their
 											efforts. The team is professional, responsive, and truly cares about the
 											success of our business. We highly recommend Positivus to any company looking
 											to grow their online presence."
@@ -760,8 +760,8 @@
 									</svg>
 									<blockquote>
 										<p class="slide-text">
-											"SECOND We have been working with Positivus SECOND for the past year and have seen a
-											significant increase in website traffic and leads as a result of their
+											"SECOND We have been working with Positivus SECOND for the past year and have
+											seen a significant increase in website traffic and leads as a result of their
 											efforts. The team is professional, responsive, and truly cares about the
 											success of our business. We highly recommend Positivus to any company looking
 											to grow their online presence."
@@ -782,8 +782,8 @@
 									</svg>
 									<blockquote>
 										<p class="slide-text">
-											"THIRD We have been working with Positivus THIRD for the past year and have seen a
-											significant increase in website traffic and leads as a result of their
+											"THIRD We have been working with Positivus THIRD for the past year and have
+											seen a significant increase in website traffic and leads as a result of their
 											efforts. The team is professional, responsive, and truly cares about the
 											success of our business. We highly recommend Positivus to any company looking
 											to grow their online presence."
@@ -804,8 +804,8 @@
 									</svg>
 									<blockquote>
 										<p class="slide-text">
-											"FOURTH We have been working with Positivus FOURTH for the past year and have seen a
-											significant increase in website traffic and leads as a result of their
+											"FOURTH We have been working with Positivus FOURTH for the past year and have
+											seen a significant increase in website traffic and leads as a result of their
 											efforts. The team is professional, responsive, and truly cares about the
 											success of our business. We highly recommend Positivus to any company looking
 											to grow their online presence."
@@ -826,8 +826,8 @@
 									</svg>
 									<blockquote>
 										<p class="slide-text">
-											"FIFTH We have been working with Positivus FIFTH for the past year and have seen a
-											significant increase in website traffic and leads as a result of their
+											"FIFTH We have been working with Positivus FIFTH for the past year and have
+											seen a significant increase in website traffic and leads as a result of their
 											efforts. The team is professional, responsive, and truly cares about the
 											success of our business. We highly recommend Positivus to any company looking
 											to grow their online presence."
@@ -1016,71 +1016,82 @@
 		<footer>
 			<div class="container">
 				<div class="footer__container">
-				<div class="footer__bar">
-					<nav class="footer__nav">
-						<a href="./index.html"
-							><svg
-								width="180"
-								height="29"
-								class="footer__logo"
+					<div class="footer__bar">
+						<nav class="footer__nav">
+							<a href="./index.html"
+								><svg
+									width="180"
+									height="29"
+									class="footer__logo"
+								>
+									<use href="./images/icons/symbol-defs.svg#icon-logo"></use></svg
+							></a>
+							<ul class="footer__list">
+								<li><a href="#about">About us</a></li>
+								<li><a href="#services">Services</a></li>
+								<li><a href="#cases">Use Cases</a></li>
+								<li><a href="#price">Pricing</a></li>
+								<li><a href="#blog">Blog</a></li>
+							</ul>
+						</nav>
+						<div class="footer__icons-container">
+							<div class="footer__icons-circle">
+								<svg
+									width="15"
+									height="15"
+									class="footer__icon"
+								>
+									<use href="./images/icons/symbol-defs.svg#icon-linkedin"></use>
+								</svg>
+							</div>
+							<svg
+								width="30"
+								height="30"
 							>
-								<use href="./images/icons/symbol-defs.svg#icon-logo"></use></svg
-						></a>
-						<ul class="footer__list">
-							<li><a href="#about">About us</a></li>
-							<li><a href="#services">Services</a></li>
-							<li><a href="#cases">Use Cases</a></li>
-							<li><a href="#price">Pricing</a></li>
-							<li><a href="#blog">Blog</a></li>
-						</ul>
-					</nav>
-					<div class="footer__icons-container">
-						<div class="footer__icons-circle"><svg
-							width="15"
-							height="15"
-							class="footer__icon"
-						>
-							<use href="./images/icons/symbol-defs.svg#icon-linkedin"></use>
-						</svg></div>
-						<svg
-							width="30"
-							height="30"
-						>
-							<use href="./images/icons/symbol-defs.svg#icon-facebook"></use>
-						</svg>
-						<div class="footer__icons-circle"><svg
-							width="18"
-							height="14"
-							class="footer__icon"
-						>
-							<use href="./images/icons/symbol-defs.svg#icon-twitter"></use>
-						</svg></div>
+								<use href="./images/icons/symbol-defs.svg#icon-facebook"></use>
+							</svg>
+							<div class="footer__icons-circle">
+								<svg
+									width="18"
+									height="14"
+									class="footer__icon"
+								>
+									<use href="./images/icons/symbol-defs.svg#icon-twitter"></use>
+								</svg>
+							</div>
+						</div>
 					</div>
+					<p class="footer__title">Contact us:</p>
+					<address>
+						<ul class="footer__address-list">
+							<li class="footer__address-list__item">
+								<a href="mailto:info@positivus.com">Email: info@devstudio.com</a>
+							</li>
+							<li class="footer__address-list__item">
+								<a href="tel:+5555678901">Phone: 555-567-8901</a>
+							</li>
+							<li class="footer__address-list__item">
+								<p>Address: 1234 Main St Moonstone City, Stardust State 12345</p>
+							</li>
+						</ul>
+					</address>
+					<form name="signup-form">
+						<input
+							type="email"
+							name="signup_email"
+							id="signup_email"
+							placeholder="Email"
+						/>
+						<button
+							type="submit"
+							class="footer__btn"
+						>
+							Subscribe to news
+						</button>
+					</form>
+					<p>&#169; 2023 Positivus. All Rights Reserved.</p>
+					<a href="#">Privacy Policy</a>
 				</div>
-				<p class="footer__title">Contact us:</p>
-				<address>
-					<ul class="footer__address-list">
-						<li class="footer__address-list__item"><a href="mailto:info@positivus.com">Email: info@devstudio.com</a></li>
-						<li class="footer__address-list__item"><a href="tel:+5555678901">Phone: 555-567-8901</a></li>
-						<li class="footer__address-list__item"><p>Address: 1234 Main St Moonstone City, Stardust State 12345</p></li>
-					</ul>
-				</address>
-				<form name="signup-form">
-					<input
-						type="email"
-						name="signup_email"
-						id="signup_email"
-						placeholder="Email"
-					/>
-					<button
-						type="submit"
-						class="footer__btn"
-					>
-						Subscribe to news
-					</button>
-				</form>
-				<p>&#169; 2023 Positivus. All Rights Reserved.</p>
-				<a href="#">Privacy Policy</a></div>
 			</div>
 		</footer>
 		<script src="./js/slider.js"></script>
