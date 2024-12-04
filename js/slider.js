@@ -15,7 +15,6 @@ function initializeDisplaySlides() {
 		const slideCopy = originalSlides[index].cloneNode(true);
 		displaySlides.push(slideCopy);
 	}
-
 	renderCarousel(false);
 	updateIndicator();
 }
@@ -83,8 +82,7 @@ function goToSlide(targetIndex) {
 	displaySlides = [];
 	if (direction === "forward") {
 		// Moving forward: Add slides with extra on the right
-		carouselTrackContainer.style.justifyContent = "left";
-		carouselTrackContainer.style.marginLeft = "-959px";
+		carouselTrackContainer.classList.remove("backward");
 		for (let i = currentIndex - 2; i <= currentIndex + 2 + Math.abs(indexDifference); i++) {
 			const index = (i + totalSlides) % totalSlides; // Ensure valid index
 			const slideCopy = originalSlides[index].cloneNode(true);
@@ -92,8 +90,7 @@ function goToSlide(targetIndex) {
 		}
 	} else {
 		// Moving backward: Add slides with extra on the left
-		carouselTrackContainer.style.justifyContent = "right";
-		carouselTrackContainer.style.marginLeft = "959px";
+		carouselTrackContainer.classList.add("backward");
 		for (let i = currentIndex - 2 - Math.abs(indexDifference); i <= currentIndex + 2; i++) {
 			const index = (i + totalSlides) % totalSlides; // Ensure valid index
 			const slideCopy = originalSlides[index].cloneNode(true);
@@ -102,34 +99,34 @@ function goToSlide(targetIndex) {
 	}
 
 	// Step 2: Render the updated slides (without animation)
-	renderCarousel(false);
+	// renderCarousel(false);
 
 	// Step 3: Wait for rendering to complete, then start the animation
+	// setTimeout(() => {
+	const translateX = -indexDifference * slideWidth;
+	renderCarousel(true, translateX);
+
+	// Step 4: After animation, clean up the `displaySlides` array
 	setTimeout(() => {
-		const translateX = -indexDifference * slideWidth;
-		renderCarousel(true, translateX);
+		displaySlides = [];
+		for (let i = targetIndex - 2; i <= targetIndex + 2; i++) {
+			const index = (i + totalSlides) % totalSlides; // Ensure valid index
+			const slideCopy = originalSlides[index].cloneNode(true);
+			displaySlides.push(slideCopy);
+		}
 
-		// Step 4: After animation, clean up the `displaySlides` array
-		setTimeout(() => {
-			displaySlides = [];
-			for (let i = targetIndex - 2; i <= targetIndex + 2; i++) {
-				const index = (i + totalSlides) % totalSlides; // Ensure valid index
-				const slideCopy = originalSlides[index].cloneNode(true);
-				displaySlides.push(slideCopy);
-			}
+		// Step 5: Update state and reset
+		currentIndex = targetIndex;
 
-			// Step 5: Update state and reset
-			currentIndex = targetIndex;
+		resetCarousel(); // Reset transform
 
-			resetCarousel(); // Reset transform
+		renderCarousel(false); // Update DOM without animation
 
-			renderCarousel(false); // Update DOM without animation
+		updateIndicator(); // Update the indicator
 
-			updateIndicator(); // Update the indicator
-
-			isAnimating = false;
-		}, 1500); // Match the animation duration
-	}, 500); // Small delay to allow DOM updates before animation
+		isAnimating = false;
+	}, 500); // Match the animation duration
+	// }, 500); // Small delay to allow DOM updates before animation
 }
 
 function updateIndicator() {

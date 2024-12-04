@@ -30,12 +30,9 @@ small {
 .carousel-track-container {
 	height: 100%;
 	width: 100%;
-	// overflow: hidden;
 	display: flex;
 	justify-content: left;
 	margin-left: -959px;
-	// justify-content: center;
-	// align-items: center;
 }
 
 .carousel-track {
@@ -65,13 +62,13 @@ small {
 .carousel-indicator {
 	display: flex;
 	justify-content: center;
-	margin-top: 20px;
+	gap: 19px;
 }
 
 .carousel-indicator .indicator-svg {
 	fill: white;
-	margin: 0 7px;
 	cursor: pointer;
+	transform: rotate(45deg);
 }
 
 .carousel-indicator .indicator-svg:hover {
@@ -84,9 +81,36 @@ small {
 
 .carousel-active {
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
-	position: absolute;
-	width: 100%;
-	top: 50%;
+	gap: 189px;
+}
+
+.backward {
+	justify-content: right;
+	margin-left: 959px;
+}
+
+.slide-btn {
+	background-color: transparent;
+}
+
+.prev-svg {
+	fill: white;
+	opacity: 30%;
+	transform: rotate(-150deg);
+}
+
+.prev-svg:hover {
+	opacity: 100%;
+}
+
+.next-svg {
+	fill: white;
+	opacity: 30%;
+	transform: rotate(30deg);
+}
+
+.next-svg:hover {
+	opacity: 100%;
 }

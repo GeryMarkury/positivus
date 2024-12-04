@@ -293,13 +293,14 @@ small {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 20px;
+  gap: 19px;
 }
 
 .carousel-indicator .indicator-svg {
   fill: white;
-  margin: 0 7px;
   cursor: pointer;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .carousel-indicator .indicator-svg:hover {
@@ -314,15 +315,46 @@ small {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: absolute;
-  width: 100%;
-  top: 50%;
+  gap: 189px;
+}
+
+.backward {
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  margin-left: 959px;
+}
+
+.slide-btn {
+  background-color: transparent;
+}
+
+.prev-svg {
+  fill: white;
+  opacity: 30%;
+  -webkit-transform: rotate(-150deg);
+          transform: rotate(-150deg);
+}
+
+.prev-svg:hover {
+  opacity: 100%;
+}
+
+.next-svg {
+  fill: white;
+  opacity: 30%;
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
+}
+
+.next-svg:hover {
+  opacity: 100%;
 }
 
 .header {
