@@ -1,5 +1,9 @@
 blockquote {
 	margin: 0;
+	display: flex;
+	flex-direction: column;
+	height: 335px;
+	justify-content: space-between;
 }
 
 cite {
@@ -12,11 +16,15 @@ small {
 	font-size: var(--p-font-size);
 }
 
+blockquote footer {
+	padding-left: 52px;
+}
+
 .slide-text {
 	padding-top: 48px;
 	padding-left: 52px;
 	padding-right: 52px;
-	margin-bottom: 100px;
+	padding-bottom: 48px;
 }
 
 .carousel-container {
@@ -113,4 +121,48 @@ small {
 
 .next-svg:hover {
 	opacity: 100%;
+}
+
+.talk-bubble {
+	// margin: 40px;
+	display: inline-block;
+	position: relative;
+	width: 606px;
+	height: auto;
+	background-color: var(--main-bg-color);
+}
+.border {
+	border: 1px solid var(--active-color);
+}
+.round {
+	border-radius: 45px;
+	-webkit-border-radius: 45px;
+	-moz-border-radius: 45px;
+}
+.tri-right.border.btm-left-in:before {
+	content: " ";
+	position: absolute;
+	transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	bottom: -21px;
+	left: 53px;
+	border: 21px solid;
+	border-color: transparent var(--active-color) var(--active-color) transparent;
+}
+.tri-right.btm-left-in:after {
+	content: " ";
+	position: absolute;
+	transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	bottom: -20px;
+	left: 54px;
+	border: 20px solid;
+	border-color: var(--main-bg-color);
+}
+.talktext p {
+	/* remove webkit p margins */
+	-webkit-margin-before: 0em;
+	-webkit-margin-after: 0em;
 }
