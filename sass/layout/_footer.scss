@@ -10,13 +10,32 @@
 		border-top-right-radius: 45px;
 	}
 
+	&__address-container {
+		display: flex;
+		justify-content: space-between;
+		padding-bottom: 50px;
+		margin-bottom: 50px;
+		border-bottom: 1px solid white;
+	}
+
+	&__form-container {
+		background-color: #292a32;
+		border-radius: 14px;
+		padding: 58px 40px;
+	}
+
+	&__rights-container {
+		display: flex;
+		gap: 40px;
+	}
+
 	&__logo {
 		fill: #fff;
 	}
 
 	&__bar {
 		display: flex;
-		gap: 155px;
+		justify-content: space-between;
 		margin-bottom: 66px;
 	}
 
@@ -37,6 +56,15 @@
 		fill: var(--main-bg-color);
 	}
 
+	&__icon-fb {
+		fill: #fff;
+		cursor: pointer;
+	}
+
+	&__icon-fb:hover {
+		fill: var(--active-color);
+	}
+
 	&__icons-container {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
@@ -44,6 +72,7 @@
 	}
 
 	&__icons-circle {
+		cursor: pointer;
 		width: 30px;
 		height: 30px;
 		border-radius: 50px;
@@ -51,6 +80,10 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+	}
+
+	&__icons-circle:hover {
+		background-color: var(--active-color);
 	}
 
 	&__title {
@@ -66,9 +99,39 @@
 		margin-top: 27px;
 	}
 
+	&__address-list > :not(:last-child) {
+		margin-bottom: 20px;
+	}
+
 	&__btn {
 		@extend .button;
 		background-color: var(--active-color);
 		color: var(--main-text-color);
 	}
+
+	&__policy {
+		text-decoration: underline;
+	}
+}
+
+#signup_email {
+	width: 285px;
+	border-radius: 14px;
+	border: 1px solid white;
+	background-color: transparent;
+	color: #fff;
+	padding-bottom: 22px;
+	padding-top: 22px;
+	padding-left: 35px;
+	margin-right: 20px;
+}
+
+#signup_email::placeholder {
+	color: white;
+}
+
+#signup_email:focus,
+#signup_email:hover {
+	outline: none;
+	border-color: var(--active-color);
 }

@@ -1039,6 +1039,7 @@
 							<svg
 								width="30"
 								height="30"
+								class="footer__icon-fb"
 							>
 								<use href="./images/icons/symbol-defs.svg#icon-facebook"></use>
 							</svg>
@@ -1053,36 +1054,48 @@
 							</div>
 						</div>
 					</div>
-					<p class="footer__title">Contact us:</p>
-					<address>
-						<ul class="footer__address-list">
-							<li class="footer__address-list__item">
-								<a href="mailto:info@positivus.com">Email: info@devstudio.com</a>
-							</li>
-							<li class="footer__address-list__item">
-								<a href="tel:+5555678901">Phone: 555-567-8901</a>
-							</li>
-							<li class="footer__address-list__item">
-								<p>Address: 1234 Main St Moonstone City, Stardust State 12345</p>
-							</li>
-						</ul>
-					</address>
-					<form name="signup-form">
-						<input
-							type="email"
-							name="signup_email"
-							id="signup_email"
-							placeholder="Email"
-						/>
-						<button
-							type="submit"
-							class="footer__btn"
+					<div class="footer__address-container">
+						<div>
+							<p class="footer__title">Contact us:</p>
+							<address>
+								<ul class="footer__address-list">
+									<li class="footer__address-list__item">
+										<a href="mailto:info@positivus.com">Email: info@devstudio.com</a>
+									</li>
+									<li class="footer__address-list__item">
+										<a href="tel:+5555678901">Phone: 555-567-8901</a>
+									</li>
+									<li class="footer__address-list__item">
+										<p>Address: 1234 Main St <br />Moonstone City, Stardust State 12345</p>
+									</li>
+								</ul>
+							</address>
+						</div>
+						<div class="footer__form-container">
+							<form name="signup-form">
+								<input
+									type="email"
+									name="signup_email"
+									id="signup_email"
+									placeholder="Email"
+								/>
+								<button
+									type="submit"
+									class="footer__btn"
+								>
+									Subscribe to news
+								</button>
+							</form>
+						</div>
+					</div>
+					<div class="footer__rights-container">
+						<p>&#169; 2023 Positivus. All Rights Reserved.</p>
+						<a
+							href="#"
+							class="footer__policy"
+							>Privacy Policy</a
 						>
-							Subscribe to news
-						</button>
-					</form>
-					<p>&#169; 2023 Positivus. All Rights Reserved.</p>
-					<a href="#">Privacy Policy</a>
+					</div>
 				</div>
 			</div>
 		</footer>

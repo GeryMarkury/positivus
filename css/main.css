@@ -452,6 +452,10 @@ blockquote footer {
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
 }
+.clients__img:hover {
+  -webkit-filter: none;
+          filter: none;
+}
 .clients__list {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -590,6 +594,28 @@ blockquote footer {
   border-top-left-radius: 45px;
   border-top-right-radius: 45px;
 }
+.footer__address-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 50px;
+  margin-bottom: 50px;
+  border-bottom: 1px solid white;
+}
+.footer__form-container {
+  background-color: #292a32;
+  border-radius: 14px;
+  padding: 58px 40px;
+}
+.footer__rights-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 40px;
+}
 .footer__logo {
   fill: #fff;
 }
@@ -597,7 +623,9 @@ blockquote footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 155px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-bottom: 66px;
 }
 .footer__nav {
@@ -616,12 +644,20 @@ blockquote footer {
 .footer__icon {
   fill: var(--main-bg-color);
 }
+.footer__icon-fb {
+  fill: #fff;
+  cursor: pointer;
+}
+.footer__icon-fb:hover {
+  fill: var(--active-color);
+}
 .footer__icons-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 .footer__icons-circle {
+  cursor: pointer;
   width: 30px;
   height: 30px;
   border-radius: 50px;
@@ -636,6 +672,9 @@ blockquote footer {
       -ms-flex-align: center;
           align-items: center;
 }
+.footer__icons-circle:hover {
+  background-color: var(--active-color);
+}
 .footer__title {
   border-radius: 7px;
   background-color: var(--active-color);
@@ -647,7 +686,51 @@ blockquote footer {
 .footer__address-list {
   margin-top: 27px;
 }
+.footer__address-list > :not(:last-child) {
+  margin-bottom: 20px;
+}
 .footer__btn {
   background-color: var(--active-color);
   color: var(--main-text-color);
+}
+.footer__policy {
+  text-decoration: underline;
+}
+
+#signup_email {
+  width: 285px;
+  border-radius: 14px;
+  border: 1px solid white;
+  background-color: transparent;
+  color: #fff;
+  padding-bottom: 22px;
+  padding-top: 22px;
+  padding-left: 35px;
+  margin-right: 20px;
+}
+
+#signup_email::-webkit-input-placeholder {
+  color: white;
+}
+
+#signup_email::-moz-placeholder {
+  color: white;
+}
+
+#signup_email:-ms-input-placeholder {
+  color: white;
+}
+
+#signup_email::-ms-input-placeholder {
+  color: white;
+}
+
+#signup_email::placeholder {
+  color: white;
+}
+
+#signup_email:focus,
+#signup_email:hover {
+  outline: none;
+  border-color: var(--active-color);
 }/*# sourceMappingURL=main.css.map */
