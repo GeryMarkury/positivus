@@ -20,13 +20,6 @@ blockquote footer {
 	padding-left: 52px;
 }
 
-.slide-text {
-	padding-top: 48px;
-	padding-left: 52px;
-	padding-right: 52px;
-	padding-bottom: 48px;
-}
-
 .carousel-container {
 	background-color: var(--main-bg-color);
 	border-radius: 45px;
@@ -124,7 +117,6 @@ blockquote footer {
 }
 
 .talk-bubble {
-	// margin: 40px;
 	display: inline-block;
 	position: relative;
 	width: 606px;
@@ -142,27 +134,28 @@ blockquote footer {
 .tri-right.border.btm-left-in:before {
 	content: " ";
 	position: absolute;
-	transform: rotate(45deg);
-	-moz-transform: rotate(45deg);
-	-webkit-transform: rotate(45deg);
-	bottom: -21px;
-	left: 53px;
-	border: 21px solid;
-	border-color: transparent var(--active-color) var(--active-color) transparent;
+	bottom: -31px;
+	left: 46px;
+	border-left: 31px solid transparent;
+	border-right: 31px solid transparent;
+	border-top: 31px solid var(--active-color);
 }
 .tri-right.btm-left-in:after {
 	content: " ";
 	position: absolute;
-	transform: rotate(45deg);
-	-moz-transform: rotate(45deg);
-	-webkit-transform: rotate(45deg);
-	bottom: -20px;
-	left: 54px;
-	border: 20px solid;
-	border-color: var(--main-bg-color);
+	bottom: -30px;
+	left: 46px;
+	border-left: 31px solid transparent;
+	border-right: 31px solid transparent;
+	border-top: 31px solid var(--main-bg-color);
 }
-.talktext p {
-	/* remove webkit p margins */
-	-webkit-margin-before: 0em;
-	-webkit-margin-after: 0em;
+.talktext {
+	padding-top: 48px;
+	padding-left: 52px;
+	padding-right: 52px;
+	padding-bottom: 48px;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 6;
+	overflow: hidden;
 }
