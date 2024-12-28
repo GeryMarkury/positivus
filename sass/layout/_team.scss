@@ -26,6 +26,17 @@
 		margin-bottom: 28px;
 	}
 
+	&__member-wrap {
+		filter: drop-shadow(8px 5px 0px rgba(35, 31, 32, 1));
+	}
+
+	&__member-frame {
+		width: 99px;
+		height: 98px;
+		position: relative;
+		clip-path: path(var(--flower));
+	}
+
 	&__member-name {
 		font-size: var(--h4-font-size);
 		font-weight: 500;

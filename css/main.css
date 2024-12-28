@@ -15,6 +15,7 @@
   --main-bg-color: #191a23;
   --active-color: #b9ff66;
   --secondary-bg-color: #f3f3f3;
+  --flower: "M84.631 48.9117C117.473 86.3213 87.1455 116.649 49.7359 83.8068C12.3263 116.649 -18.0016 86.3213 14.8408 48.9117C-18.0016 11.5021 12.3263 -18.8258 49.7359 14.0166C87.1455 -18.8258 117.473 11.5021 84.631 48.9117Z";
 }
 
 .visually-hidden {
@@ -581,6 +582,17 @@ blockquote footer {
   padding-bottom: 28px;
   border-bottom: 1px solid black;
   margin-bottom: 28px;
+}
+.team__member-wrap {
+  -webkit-filter: drop-shadow(8px 5px 0px rgb(35, 31, 32));
+          filter: drop-shadow(8px 5px 0px rgb(35, 31, 32));
+}
+.team__member-frame {
+  width: 99px;
+  height: 98px;
+  position: relative;
+  -webkit-clip-path: path(var(--flower));
+          clip-path: path(var(--flower));
 }
 .team__member-name {
   font-size: var(--h4-font-size);
