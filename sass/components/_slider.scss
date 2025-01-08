@@ -149,14 +149,16 @@ blockquote footer {
 	border-right: 31px solid transparent;
 	border-top: 31px solid var(--main-bg-color);
 }
-.talktext {
+
+.slide-text {
 	padding-top: 48px;
 	padding-left: 52px;
 	padding-right: 52px;
 	padding-bottom: 48px;
+	overflow: hidden;
+	text-overflow: ellipsis;
 	display: -webkit-box;
 	-webkit-box-orient: vertical;
 	-webkit-line-clamp: 6;
 	line-clamp: 6;
-	overflow: hidden;
 }
