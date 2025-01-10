@@ -1,7 +1,27 @@
 .contact {
 	&__container {
 		display: flex;
-		gap: 217px;
+		justify-content: space-between;
+		background-color: var(--secondary-bg-color);
+		border-radius: 45px;
+		padding-top: 60px;
+		padding-left: 100px;
+		padding-bottom: 80px;
+	}
+
+	&__radio {
+		appearance: none;
+		-webkit-appearance: none;
+		border-radius: 50%;
+		background: #fff;
+		border: 3px solid #fff;
+		box-shadow: 0 0 0 1px black;
+		height: 16px;
+		width: 16px;
+	}
+
+	&__radio:checked {
+		background: var(--active-color);
 	}
 
 	&__label {

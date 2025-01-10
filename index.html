@@ -52,14 +52,14 @@
 						</button>
 					</div>
 				</nav>
-				<button>
+				<!-- <button>
 					<svg
 						width="24"
 						height="16"
 					>
 						<use href="./images/icons/symbol-defs.svg#icon-burger"></use>
 					</svg>
-				</button>
+				</button> -->
 			</div>
 		</header>
 		<main>
@@ -67,7 +67,7 @@
 				<div class="container hero__container">
 					<div>
 						<h1 class="hero__title">Navigating the digital landscape for success</h1>
-						<p>
+						<p class="hero__text">
 							Our digital marketing agency helps businesses grow and succeed online through a range
 							of services including SEO, PPC, social media marketing, and content creation.
 						</p>
@@ -214,7 +214,7 @@
 					</ul>
 				</div>
 			</section>
-			<section class="services">
+			<section class="section services">
 				<div class="container">
 					<div class="title-container">
 						<h2 class="section__title">Services</h2>
@@ -392,51 +392,53 @@
 				</div>
 			</section>
 			<section class="section">
-				<div class="container proposal__container">
-					<div>
-						<h2>Let's make things happen</h2>
-						<p>
-							Contact us today to learn more about how our digital marketing services can help your
-							business grow and succeed online.
-						</p>
-						<button
-							type="button"
-							class="button"
-						>
-							Get your free proposal
-						</button>
-					</div>
-					<div>
-						<svg
-							width="209"
-							height="209"
-						>
-							<use href="./images/icons/symbol-defs.svg#icon-bigStar"></use>
-						</svg>
-						<svg
-							width="338"
-							height="71"
-						>
-							<use href="./images/icons/symbol-defs.svg#icon-ellipse"></use>
-						</svg>
-						<svg
-							width="338"
-							height="71"
-						>
-							<use href="./images/icons/symbol-defs.svg#icon-ellipse"></use>
-						</svg>
-						<svg
-							width="338"
-							height="71"
-						>
-							<use href="./images/icons/symbol-defs.svg#icon-ellipse"></use>
-						</svg>
-						<svg
-							width="289"
-							height="270"
-						>
-							<use href="./images/icons/symbol-defs.svg#icon-cta"></use>
-						</svg>
+				<div class="container">
+					<div class="proposal__bg">
+						<div>
+							<h2 class="proposal__title">Let's make things happen</h2>
+							<p class="proposal__text">
+								Contact us today to learn more about how our digital marketing services can help
+								your business grow and succeed online.
+							</p>
+							<button
+								type="button"
+								class="button"
+							>
+								Get your free proposal
+							</button>
+						</div>
+						<div>
+							<svg
+								width="209"
+								height="209"
+							>
+								<use href="./images/icons/symbol-defs.svg#icon-bigStar"></use>
+							</svg>
+							<svg
+								width="338"
+								height="71"
+							>
+								<use href="./images/icons/symbol-defs.svg#icon-ellipse"></use>
+							</svg>
+							<svg
+								width="338"
+								height="71"
+							>
+								<use href="./images/icons/symbol-defs.svg#icon-ellipse"></use>
+							</svg>
+							<svg
+								width="338"
+								height="71"
+							>
+								<use href="./images/icons/symbol-defs.svg#icon-ellipse"></use>
+							</svg>
+							<svg
+								width="289"
+								height="270"
+							>
+								<use href="./images/icons/symbol-defs.svg#icon-cta"></use>
+							</svg>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -450,47 +452,59 @@
 						</p>
 					</div>
 					<ul class="case__list">
-						<li>
-							<p>
+						<li class="case__list-item">
+							<p class="case__list-item__text">
 								For a local restaurant, we implemented a targeted PPC campaign that resulted in a
 								50% increase in website traffic and a 25% increase in sales.
 							</p>
-							<button>
+							<a
+								href="#"
+								class="case__list-item__btn"
+							>
 								Learn more<svg
-									width="17"
-									height="10"
+									width="20"
+									height="20"
+									class="case__list-item__btn__svg"
 								>
 									<use href="./images/icons/symbol-defs.svg#icon-arrow"></use>
 								</svg>
-							</button>
+							</a>
 						</li>
-						<li>
-							<p>
+						<li class="case__list-item">
+							<p class="case__list-item__text">
 								For a B2B software company, we developed an SEO strategy that resulted in a first
 								page ranking for key keywords and a 200% increase in organic traffic.
 							</p>
-							<button>
+							<a
+								href="#"
+								class="case__list-item__btn"
+							>
 								Learn more<svg
-									width="17"
-									height="10"
+									width="20"
+									height="20"
+									class="case__list-item__btn__svg"
 								>
 									<use href="./images/icons/symbol-defs.svg#icon-arrow"></use>
 								</svg>
-							</button>
+							</a>
 						</li>
-						<li>
-							<p>
+						<li class="case__list-item">
+							<p class="case__list-item__text">
 								For a national retail chain, we created a social media marketing campaign that
 								increased followers by 25% and generated a 20% increase in online sales.
 							</p>
-							<button>
+							<a
+								href="#"
+								class="case__list-item__btn"
+							>
 								Learn more<svg
-									width="17"
-									height="10"
+									width="20"
+									height="20"
+									class="case__list-item__btn__svg"
 								>
 									<use href="./images/icons/symbol-defs.svg#icon-arrow"></use>
 								</svg>
-							</button>
+							</a>
 						</li>
 					</ul>
 				</div>
@@ -994,6 +1008,7 @@
 									name="option"
 									value="say hi"
 									checked
+									class="contact__radio"
 								/>Say Hi
 							</label>
 							<label>
@@ -1001,6 +1016,7 @@
 									type="radio"
 									name="option"
 									value="get a quote"
+									class="contact__radio"
 								/>Get a Quote
 							</label>
 							<label class="contact__label">

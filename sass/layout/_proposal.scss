@@ -1,6 +1,17 @@
 .proposal {
-	&__container {
+	&__bg {
 		display: flex;
 		gap: 168px;
+		background-color: var(--secondary-bg-color);
+		border-radius: 45px;
+		padding: 60px;
+	}
+
+	&__title {
+		margin-bottom: 26px;
+	}
+
+	&__text {
+		margin-bottom: 26px;
 	}
 }
