@@ -1002,49 +1002,61 @@
 					</div>
 					<div class="contact__container">
 						<form>
-							<label>
-								<input
-									type="radio"
-									name="option"
-									value="say hi"
-									checked
-									class="contact__radio"
-								/>Say Hi
-							</label>
-							<label>
-								<input
-									type="radio"
-									name="option"
-									value="get a quote"
-									class="contact__radio"
-								/>Get a Quote
-							</label>
-							<label class="contact__label">
-								Name
-								<input
-									type="text"
-									name="name"
-									placeholder="Name"
-								/>
-							</label>
-							<label class="contact__label">
-								Email*
-								<input
-									type="email"
-									name="email"
-									placeholder="Email"
-									required
-								/>
-							</label>
-							<label class="contact__label">
-								Message*
-								<input
-									type="text"
-									name="message"
-									placeholder="Message"
-									required
-								/>
-							</label>
+							<div class="contact__radio">
+								<label class="contact__radio-label">
+									<input
+										type="radio"
+										name="option"
+										value="say hi"
+										checked
+										class="contact__radio-input"
+									/>Say Hi
+								</label>
+								<label class="contact__radio-label">
+									<input
+										type="radio"
+										name="option"
+										value="get a quote"
+										class="contact__radio-input"
+									/>Get a Quote
+								</label>
+							</div>
+							<div class="contact__form-container">
+								<label
+									class="contact__form-label"
+									for="name"
+								>
+									Name
+									<input
+										type="text"
+										name="name"
+										placeholder="Name"
+										required
+										minlength="2"
+										class="contact__form-input"
+									/>
+								</label>
+								<label class="contact__form-label">
+									Email*
+									<input
+										type="email"
+										name="email"
+										placeholder="Email"
+										required
+										class="contact__form-input"
+									/>
+								</label>
+								<label class="contact__form-label">
+									Message*
+									<input
+										type="text"
+										name="message"
+										placeholder="Message"
+										required
+										class="contact__form-input"
+									/>
+								</label>
+							</div>
 							<button
 								type="submit"
 								class="contact__btn"
