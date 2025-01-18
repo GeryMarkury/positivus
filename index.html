@@ -1027,35 +1027,40 @@
 									for="name"
 								>
 									Name
-									<input
-										type="text"
-										name="name"
-										placeholder="Name"
-										required
-										minlength="2"
-										class="contact__form-input"
-									/>
 								</label>
-								<label class="contact__form-label">
-									Email*
-									<input
-										type="email"
-										name="email"
-										placeholder="Email"
-										required
-										class="contact__form-input"
-									/>
-								</label>
-								<label class="contact__form-label">
-									Message*
-									<input
-										type="text"
-										name="message"
-										placeholder="Message"
-										required
-										class="contact__form-input"
-									/>
-								</label>
+								<input
+									type="text"
+									name="name"
+									id="name"
+									placeholder="Name"
+									minlength="2"
+									class="contact__form-input"
+								/>
+								<label
+									class="contact__form-label"
+									for="email"
+								>
+									Email* </label
+								><input
+									type="email"
+									name="email"
+									id="email"
+									placeholder="Email"
+									required
+									class="contact__form-input"
+								/>
+								<label
+									class="contact__form-label"
+									for="message"
+								>
+									Message* </label
+								><textarea
+									name="message"
+									id="message"
+									placeholder="Message"
+									required
+									class="contact__form-input"
+								></textarea>
 							</div>
 							<button
 								type="submit"
@@ -1064,26 +1069,28 @@
 								Send Message
 							</button>
 						</form>
-						<div>
-							<svg
-								width="651"
-								height="649"
-							>
-								<use href="./images/icons/symbol-defs.svg#icon-biggestStar"></use>
-							</svg>
-							<svg
-								width="179"
-								height="179"
-							>
-								<use href="./images/icons/symbol-defs.svg#icon-star"></use>
-							</svg>
-							<svg
-								width="100"
-								height="100"
-							>
-								<use href="./images/icons/symbol-defs.svg#icon-star"></use>
-							</svg>
-						</div>
+
+						<svg
+							width="651"
+							height="649"
+							class="contact__icon"
+						>
+							<use href="./images/icons/symbol-defs.svg#icon-biggestStar"></use>
+						</svg>
+						<svg
+							width="179"
+							height="179"
+							class="contact__icon"
+						>
+							<use href="./images/icons/symbol-defs.svg#icon-star"></use>
+						</svg>
+						<svg
+							width="100"
+							height="100"
+							class="contact__icon"
+						>
+							<use href="./images/icons/symbol-defs.svg#icon-star"></use>
+						</svg>
 					</div>
 				</div>
 			</section>
