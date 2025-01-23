@@ -1,10 +1,30 @@
 .hero {
 	margin-bottom: 104px;
 
+	&__content {
+		width: 531px;
+	}
+
 	&__container {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		gap: 108px;
+
+		&-svg {
+			position: relative;
+		}
+
+		&-svg * {
+			position: absolute;
+		}
+	}
+
+	#ellipse {
+		transform: rotate(29deg);
+
+		&:first-child {
+			bottom: 10%;
+		}
 	}
 
 	&__title {

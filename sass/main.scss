@@ -1,10 +1,10 @@
 @import "./utils/variables";
 @import "./utils/visually-hidden";
+@import "./utils/mixins";
 
 @import "./base/base";
 @import "./base/reset.scss";
 
-@import "./components/container";
 @import "./components/nav";
 @import "./components/section";
 @import "./components/title-container";

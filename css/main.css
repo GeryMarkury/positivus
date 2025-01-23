@@ -37,6 +37,22 @@ body {
   font-family: var(--main-font);
   color: var(--main-text-color);
   font-size: var(--p-font-size);
+  margin: 0 auto;
+  padding: 0;
+}
+@media screen and (max-width: 430px) {
+  body {
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 430px;
+  }
+}
+@media screen and (min-width: 431px) {
+  body {
+    padding-left: 100px;
+    padding-right: 100px;
+    max-width: 1440px;
+  }
 }
 
 h1,
@@ -77,17 +93,6 @@ address {
 button {
   cursor: pointer;
   border: none;
-}
-
-.container {
-  margin: 0 auto;
-  padding: 0 20px;
-}
-@media screen and (min-width: 768px) {
-  .container {
-    padding-left: 100px;
-    padding-right: 100px;
-  }
 }
 
 .nav {
@@ -441,10 +446,26 @@ blockquote footer {
 .hero {
   margin-bottom: 104px;
 }
+.hero__content {
+  width: 531px;
+}
 .hero__container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 108px;
+}
+.hero__container-svg {
+  position: relative;
+}
+.hero__container-svg * {
+  position: absolute;
+}
+.hero #ellipse {
+  -webkit-transform: rotate(29deg);
+          transform: rotate(29deg);
+}
+.hero #ellipse:first-child {
+  bottom: 10%;
 }
 .hero__title {
   font-size: var(--h1-font-size);
