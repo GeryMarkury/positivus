@@ -447,15 +447,15 @@ blockquote footer {
   margin-bottom: 104px;
 }
 .hero__content {
-  width: 531px;
+  max-width: 531px;
 }
 .hero__container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 108px;
 }
 .hero__container-svg {
   position: relative;
+  max-width: 600px;
 }
 .hero__container-svg * {
   position: absolute;
@@ -465,7 +465,23 @@ blockquote footer {
           transform: rotate(29deg);
 }
 .hero #ellipse:first-child {
-  bottom: 10%;
+  bottom: 21%;
+}
+.hero #ellipse:nth-child(2) {
+  bottom: 30%;
+  right: -4%;
+}
+.hero #ellipse:nth-child(3) {
+  bottom: 40%;
+  right: -8%;
+}
+.hero #loudspeaker {
+  right: 17%;
+  bottom: 16%;
+}
+.hero #heart {
+  top: 0;
+  right: 10%;
 }
 .hero__title {
   font-size: var(--h1-font-size);

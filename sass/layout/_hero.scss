@@ -2,16 +2,16 @@
 	margin-bottom: 104px;
 
 	&__content {
-		width: 531px;
+		max-width: 531px;
 	}
 
 	&__container {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		gap: 108px;
 
 		&-svg {
 			position: relative;
+			max-width: 600px;
 		}
 
 		&-svg * {
@@ -23,8 +23,28 @@
 		transform: rotate(29deg);
 
 		&:first-child {
-			bottom: 10%;
+			bottom: 21%;
 		}
+
+		&:nth-child(2) {
+			bottom: 30%;
+			right: -4%;
+		}
+
+		&:nth-child(3) {
+			bottom: 40%;
+			right: -8%;
+		}
+	}
+
+	#loudspeaker {
+		right: 17%;
+		bottom: 16%;
+	}
+
+	#heart {
+		top: 0;
+		right: 10%;
 	}
 
 	&__title {
