@@ -457,31 +457,67 @@ blockquote footer {
   position: relative;
   max-width: 600px;
 }
-.hero__container-svg * {
-  position: absolute;
-}
-.hero #ellipse {
+.hero__container-svg .hero__ellipse {
   -webkit-transform: rotate(29deg);
           transform: rotate(29deg);
 }
-.hero #ellipse:first-child {
-  bottom: 21%;
+.hero__container-svg .hero__ellipse:first-child {
+  bottom: 12%;
+  right: 7%;
 }
-.hero #ellipse:nth-child(2) {
-  bottom: 30%;
-  right: -4%;
+.hero__container-svg .hero__ellipse:nth-child(2) {
+  bottom: 20%;
+  right: 3%;
 }
-.hero #ellipse:nth-child(3) {
-  bottom: 40%;
-  right: -8%;
+.hero__container-svg .hero__ellipse:nth-child(3) {
+  bottom: 28%;
+  right: 0;
 }
-.hero #loudspeaker {
+.hero__container-svg #loudspeaker {
   right: 17%;
-  bottom: 16%;
+  bottom: 11%;
 }
-.hero #heart {
-  top: 0;
-  right: 10%;
+.hero__container-svg #heart {
+  right: 15%;
+}
+.hero__container-svg .hero__star-1 {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  bottom: 9%;
+  left: 12%;
+}
+.hero__container-svg .hero__star-2 {
+  bottom: -6%;
+  right: 45%;
+}
+.hero__container-svg .round-1 {
+  top: 10%;
+  left: 10%;
+}
+.hero__container-svg .round-2 {
+  top: 21%;
+  left: 19%;
+  fill: var(--active-color);
+}
+.hero__container-svg .round-3 {
+  bottom: -2%;
+  right: 28%;
+  fill: var(--active-color);
+}
+.hero__container-svg #share {
+  top: 3%;
+  right: 0;
+}
+.hero__container-svg #play {
+  top: 26%;
+  right: 2%;
+}
+.hero__container-svg #location {
+  top: 49%;
+  right: 4%;
+}
+.hero__container-svg * {
+  position: absolute;
 }
 .hero__title {
   font-size: var(--h1-font-size);
@@ -591,16 +627,48 @@ blockquote footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 168px;
+  gap: 186px;
   background-color: var(--secondary-bg-color);
   border-radius: 45px;
   padding: 60px;
+}
+.proposal__container {
+  max-width: 500px;
 }
 .proposal__title {
   margin-bottom: 26px;
 }
 .proposal__text {
   margin-bottom: 26px;
+}
+.proposal__svg {
+  position: relative;
+  max-width: 494px;
+}
+.proposal__svg__head {
+  width: 125px;
+  height: 125px;
+  background-color: black;
+  border-radius: 50%;
+  position: relative;
+}
+.proposal__svg__head-eyes {
+  width: 20px;
+  height: 40px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 29px;
+  left: 32px;
+}
+.proposal__svg__head-eyes:first-child {
+  left: 73px;
+}
+.proposal__svg .proposal__bigStar {
+  bottom: 40%;
+}
+.proposal__svg * {
+  position: absolute;
 }
 
 .case__list {

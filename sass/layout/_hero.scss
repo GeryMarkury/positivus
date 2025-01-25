@@ -12,39 +12,77 @@
 		&-svg {
 			position: relative;
 			max-width: 600px;
+
+			.hero__ellipse {
+				transform: rotate(29deg);
+
+				&:first-child {
+					bottom: 12%;
+					right: 7%;
+				}
+
+				&:nth-child(2) {
+					bottom: 20%;
+					right: 3%;
+				}
+
+				&:nth-child(3) {
+					bottom: 28%;
+					right: 0;
+				}
+			}
+
+			#loudspeaker {
+				right: 17%;
+				bottom: 11%;
+			}
+
+			#heart {
+				right: 15%;
+			}
+
+			.hero__star-1 {
+				transform: rotate(45deg);
+				bottom: 9%;
+				left: 12%;
+			}
+
+			.hero__star-2 {
+				bottom: -6%;
+				right: 45%;
+			}
+
+			.round-1 {
+				top: 10%;
+				left: 10%;
+			}
+			.round-2 {
+				top: 21%;
+				left: 19%;
+				fill: var(--active-color);
+			}
+			.round-3 {
+				bottom: -2%;
+				right: 28%;
+				fill: var(--active-color);
+			}
+			#share {
+				top: 3%;
+				right: 0;
+			}
+			#play {
+				top: 26%;
+				right: 2%;
+			}
+			#location {
+				top: 49%;
+				right: 4%;
+			}
 		}
 
 		&-svg * {
 			position: absolute;
 		}
-	}
-
-	#ellipse {
-		transform: rotate(29deg);
-
-		&:first-child {
-			bottom: 21%;
-		}
-
-		&:nth-child(2) {
-			bottom: 30%;
-			right: -4%;
-		}
-
-		&:nth-child(3) {
-			bottom: 40%;
-			right: -8%;
-		}
-	}
-
-	#loudspeaker {
-		right: 17%;
-		bottom: 16%;
-	}
-
-	#heart {
-		top: 0;
-		right: 10%;
 	}
 
 	&__title {

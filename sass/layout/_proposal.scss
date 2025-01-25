@@ -1,10 +1,14 @@
 .proposal {
 	&__bg {
 		display: flex;
-		gap: 168px;
+		gap: 186px;
 		background-color: var(--secondary-bg-color);
 		border-radius: 45px;
 		padding: 60px;
+	}
+
+	&__container {
+		max-width: 500px;
 	}
 
 	&__title {
@@ -13,5 +17,40 @@
 
 	&__text {
 		margin-bottom: 26px;
+	}
+
+	&__svg {
+		position: relative;
+		max-width: 494px;
+
+		&__head {
+			width: 125px;
+			height: 125px;
+			background-color: black;
+			border-radius: 50%;
+			position: relative;
+
+			&-eyes {
+				width: 20px;
+				height: 40px;
+				background-color: white;
+				border-radius: 50%;
+				position: absolute;
+				top: 29px;
+				left: 32px;
+
+				&:first-child {
+					left: 73px;
+				}
+			}
+		}
+
+		.proposal__bigStar {
+			bottom: 40%;
+		}
+
+		& * {
+			position: absolute;
+		}
 	}
 }
