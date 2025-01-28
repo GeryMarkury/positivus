@@ -1,6 +1,7 @@
 .proposal {
 	&__bg {
-		display: flex;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
 		gap: 186px;
 		background-color: var(--secondary-bg-color);
 		border-radius: 45px;
