@@ -1,31 +1,39 @@
 .contact {
+	&__form {
+		width: 556px;
+	}
+
 	&__icon {
 		position: absolute;
 
 		&:first-of-type {
-			right: -325px;
+			right: -324px;
 		}
 
 		&:nth-of-type(2) {
-			right: 68px;
-			top: 224px;
+			right: 8%;
+			top: 34%;
+			transform: rotate(45deg);
 		}
 
 		&:last-of-type {
-			bottom: 48px;
-			right: 225px;
+			bottom: 20%;
+			right: 18%;
+			transform: rotate(45deg);
+			fill: var(--active-color);
 		}
 	}
 
 	&__container {
 		position: relative;
-		display: flex;
-		justify-content: space-between;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
 		background-color: var(--secondary-bg-color);
 		border-radius: 45px;
 		padding-top: 60px;
 		padding-left: 100px;
 		padding-bottom: 80px;
+		overflow: hidden;
 	}
 
 	&__radio {
@@ -58,6 +66,7 @@
 
 	&__form-container {
 		margin-bottom: 40px;
+		width: 496px;
 	}
 
 	&__form-label {

@@ -318,8 +318,6 @@ blockquote footer {
 .carousel-indicator .indicator-svg {
   fill: white;
   cursor: pointer;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
 }
 
 .carousel-indicator .indicator-svg:hover {
@@ -649,7 +647,8 @@ blockquote footer {
   height: 125px;
   background-color: black;
   border-radius: 50%;
-  position: relative;
+  top: 17%;
+  left: 18%;
 }
 .proposal__svg__head-eyes {
   width: 20px;
@@ -663,8 +662,30 @@ blockquote footer {
 .proposal__svg__head-eyes:first-child {
   left: 73px;
 }
-.proposal__svg .proposal__bigStar {
-  bottom: 40%;
+.proposal__svg__bigStar {
+  bottom: 45%;
+  left: 28%;
+}
+.proposal__svg__ellipse {
+  bottom: 33%;
+  right: 31%;
+}
+.proposal__svg__ellipse ~ .proposal__svg__ellipse {
+  bottom: 21%;
+}
+.proposal__svg__ellipse ~ .proposal__svg__ellipse ~ .proposal__svg__ellipse {
+  bottom: 10%;
+}
+.proposal__svg__small-star {
+  bottom: -31%;
+  left: 18%;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  fill: var(--active-color);
+}
+.proposal__svg__star {
+  bottom: -14%;
+  right: 27%;
 }
 .proposal__svg * {
   position: absolute;
@@ -779,37 +800,51 @@ blockquote footer {
       -ms-flex-align: center;
           align-items: center;
 }
+.team__btn-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-flow: row-reverse;
+          flex-flow: row-reverse;
+}
 .team__btn {
   padding: 20px 76px;
 }
 
+.contact__form {
+  width: 556px;
+}
 .contact__icon {
   position: absolute;
 }
 .contact__icon:first-of-type {
-  right: -325px;
+  right: -324px;
 }
 .contact__icon:nth-of-type(2) {
-  right: 68px;
-  top: 224px;
+  right: 8%;
+  top: 34%;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 .contact__icon:last-of-type {
-  bottom: 48px;
-  right: 225px;
+  bottom: 20%;
+  right: 18%;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  fill: var(--active-color);
 }
 .contact__container {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   background-color: var(--secondary-bg-color);
   border-radius: 45px;
   padding-top: 60px;
   padding-left: 100px;
   padding-bottom: 80px;
+  overflow: hidden;
 }
 .contact__radio {
   display: -webkit-box;
@@ -843,6 +878,7 @@ blockquote footer {
 }
 .contact__form-container {
   margin-bottom: 40px;
+  width: 496px;
 }
 .contact__form-label {
   display: block;

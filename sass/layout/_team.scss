@@ -68,9 +68,13 @@
 		align-items: center;
 	}
 
+	&__btn-container {
+		display: flex;
+		flex-flow: row-reverse;
+	}
+
 	&__btn {
 		@extend .button;
 		padding: 20px 76px;
-		// float: right;
 	}
 }

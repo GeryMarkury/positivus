@@ -29,7 +29,9 @@
 			height: 125px;
 			background-color: black;
 			border-radius: 50%;
-			position: relative;
+			top: 17%;
+			left: 18%;
+			// position: relative;
 
 			&-eyes {
 				width: 20px;
@@ -46,8 +48,34 @@
 			}
 		}
 
-		.proposal__bigStar {
-			bottom: 40%;
+		&__bigStar {
+			bottom: 45%;
+			left: 28%;
+		}
+
+		&__ellipse {
+			bottom: 33%;
+			right: 31%;
+		}
+
+		&__ellipse ~ &__ellipse {
+			bottom: 21%;
+		}
+
+		&__ellipse ~ &__ellipse ~ &__ellipse {
+			bottom: 10%;
+		}
+
+		&__small-star {
+			bottom: -31%;
+			left: 18%;
+			transform: rotate(45deg);
+			fill: var(--active-color);
+		}
+
+		&__star {
+			bottom: -14%;
+			right: 27%;
 		}
 
 		& * {
