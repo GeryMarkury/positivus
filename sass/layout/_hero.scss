@@ -15,6 +15,7 @@
 
 			.hero__ellipse {
 				transform: rotate(29deg);
+				animation: squeeze 2s ease;
 
 				&:first-child {
 					bottom: 12%;
@@ -35,53 +36,75 @@
 			#loudspeaker {
 				right: 17%;
 				bottom: 11%;
+				animation: wobble 2s ease 0.7s;
 			}
 
 			#heart {
 				right: 15%;
+				animation: fadeIn 2s ease 0s 1 normal backwards;
 			}
 
 			.hero__star-1 {
 				transform: rotate(45deg);
 				bottom: 9%;
 				left: 12%;
+				opacity: 0;
+				animation: swirl1 2s ease 0.7s forwards;
 			}
 
 			.hero__star-2 {
 				bottom: -6%;
 				right: 45%;
+				opacity: 0;
+				animation: swirl 2s ease 0.7s forwards;
 			}
 
 			.round-1 {
 				top: 10%;
 				left: 10%;
+				animation: fall 2.5s ease 0s 1 normal backwards;
 			}
 			.round-2 {
 				top: 21%;
 				left: 19%;
 				fill: var(--active-color);
+				animation: fall 2s ease 0.5s 1 normal backwards;
 			}
 			.round-3 {
 				bottom: -2%;
 				right: 28%;
 				fill: var(--active-color);
+				animation: rise 2s ease 0.5s 1 normal backwards;
 			}
 			#share {
 				top: 3%;
 				right: 0;
+				animation: fadeIn 2s ease 0s 1 normal backwards;
 			}
 			#play {
 				top: 26%;
 				right: 2%;
+				animation: fadeIn 2s ease 0s 1 normal backwards;
 			}
 			#location {
 				top: 49%;
 				right: 4%;
+				animation: fadeIn 2s ease 0s 1 normal backwards;
 			}
 		}
 
 		&-svg * {
 			position: absolute;
+		}
+
+		&-svg:hover {
+			.hero__ellipse {
+				animation: none;
+			}
+
+			#loudspeaker {
+				animation: none;
+			}
 		}
 	}
 
@@ -92,5 +115,187 @@
 
 	&__text {
 		margin-bottom: 34px;
+	}
+}
+
+@keyframes squeeze {
+	0% {
+		transform: rotate(29deg) scale3d(1, 1, 1);
+	}
+
+	30% {
+		transform: rotate(29deg) scale3d(0.75, 1.25, 1);
+	}
+
+	40% {
+		transform: rotate(29deg) scale3d(1.25, 0.75, 1);
+	}
+
+	50% {
+		transform: rotate(29deg) scale3d(0.85, 1.15, 1);
+	}
+
+	65% {
+		transform: rotate(29deg) scale3d(1.05, 0.95, 1);
+	}
+
+	75% {
+		transform: rotate(29deg) scale3d(0.95, 1.05, 1);
+	}
+
+	100% {
+		transform: rotate(29deg) scale3d(1, 1, 1);
+	}
+}
+
+@keyframes wobble {
+	0%,
+	100% {
+		transform: translateY(0) rotate(0);
+		transform-origin: 50% 50%;
+	}
+
+	15% {
+		transform: translateY(-30px) rotate(-6deg);
+	}
+
+	30% {
+		transform: translateY(15px) rotate(6deg);
+	}
+
+	45% {
+		transform: translateY(-15px) rotate(-3.6deg);
+	}
+
+	60% {
+		transform: translateY(9px) rotate(2.4deg);
+	}
+
+	75% {
+		transform: translateY(-6px) rotate(-1.2deg);
+	}
+}
+
+@keyframes swirl {
+	0% {
+		opacity: 0;
+		transform: rotate(-540deg) scale(0);
+	}
+
+	100% {
+		opacity: 1;
+		transform: rotate(0) scale(1);
+	}
+}
+
+@keyframes swirl1 {
+	0% {
+		opacity: 0;
+		transform: rotate(-585deg) scale(0);
+	}
+
+	100% {
+		opacity: 1;
+		transform: rotate(45deg) scale(1);
+	}
+}
+
+@keyframes fall {
+	0% {
+		animation-timing-function: ease-in;
+		opacity: 0;
+		transform: translateY(-250px);
+	}
+
+	38% {
+		animation-timing-function: ease-out;
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	55% {
+		animation-timing-function: ease-in;
+		transform: translateY(-65px);
+	}
+
+	72% {
+		animation-timing-function: ease-out;
+		transform: translateY(0);
+	}
+
+	81% {
+		animation-timing-function: ease-in;
+		transform: translateY(-28px);
+	}
+
+	90% {
+		animation-timing-function: ease-out;
+		transform: translateY(0);
+	}
+
+	95% {
+		animation-timing-function: ease-in;
+		transform: translateY(-8px);
+	}
+
+	100% {
+		animation-timing-function: ease-out;
+		transform: translateY(0);
+	}
+}
+
+@keyframes rise {
+	0% {
+		animation-timing-function: ease-in;
+		opacity: 0;
+		transform: translateY(250px);
+	}
+
+	38% {
+		animation-timing-function: ease-out;
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	55% {
+		animation-timing-function: ease-in;
+		transform: translateY(65px);
+	}
+
+	72% {
+		animation-timing-function: ease-out;
+		transform: translateY(0);
+	}
+
+	81% {
+		animation-timing-function: ease-in;
+		transform: translateY(28px);
+	}
+
+	90% {
+		animation-timing-function: ease-out;
+		transform: translateY(0);
+	}
+
+	95% {
+		animation-timing-function: ease-in;
+		transform: translateY(8px);
+	}
+
+	100% {
+		animation-timing-function: ease-out;
+		transform: translateY(0);
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+		transform: scale(0.6);
+	}
+
+	100% {
+		opacity: 1;
+		transform: scale(1);
 	}
 }
