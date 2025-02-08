@@ -8,12 +8,14 @@
 
 		&:first-of-type {
 			right: -324px;
+			animation: fadeIn 2s ease 0s 1 normal backwards;
 		}
 
 		&:nth-of-type(2) {
 			right: 8%;
 			top: 34%;
 			transform: rotate(45deg);
+			animation: shake 2s linear 0s 1 normal forwards;
 		}
 
 		&:last-of-type {
@@ -21,6 +23,7 @@
 			right: 18%;
 			transform: rotate(45deg);
 			fill: var(--active-color);
+			animation: shake 2s linear 0.5s 1 normal forwards;
 		}
 	}
 
@@ -101,5 +104,37 @@
 		@extend .button;
 		width: 556px;
 		padding: 20px auto;
+	}
+}
+
+@keyframes shake {
+	0%,
+	100% {
+		transform: rotate(45deg);
+		transform-origin: 50% 50%;
+	}
+
+	10% {
+		transform: rotate(53deg);
+	}
+
+	20%,
+	40%,
+	60% {
+		transform: rotate(35deg);
+	}
+
+	30%,
+	50%,
+	70% {
+		transform: rotate(55deg);
+	}
+
+	80% {
+		transform: rotate(37deg);
+	}
+
+	90% {
+		transform: rotate(53deg);
 	}
 }

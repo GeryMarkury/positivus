@@ -31,7 +31,7 @@
 			border-radius: 50%;
 			top: 17%;
 			left: 18%;
-			// position: relative;
+			animation: shift 2s linear 1s forwards;
 
 			&-eyes {
 				width: 20px;
@@ -51,19 +51,27 @@
 		&__bigStar {
 			bottom: 45%;
 			left: 28%;
+			opacity: 0;
+			animation: swirlBack 2s ease 1s forwards;
 		}
 
 		&__ellipse {
 			bottom: 33%;
 			right: 31%;
+			opacity: 0;
+			animation: fall 0.6s ease 0s forwards;
 		}
 
 		&__ellipse ~ &__ellipse {
 			bottom: 21%;
+			opacity: 0;
+			animation: fall 0.7s ease 0.2s forwards;
 		}
 
 		&__ellipse ~ &__ellipse ~ &__ellipse {
 			bottom: 10%;
+			opacity: 0;
+			animation: fall 0.8s ease 0.4s forwards;
 		}
 
 		&__small-star {
@@ -71,15 +79,111 @@
 			left: 18%;
 			transform: rotate(45deg);
 			fill: var(--active-color);
+			animation: pulse 2s linear 0.5s 2 normal forwards;
 		}
 
 		&__star {
 			bottom: -14%;
 			right: 27%;
+			z-index: 1;
+			opacity: 0;
+			animation: swirl 2s ease 1s forwards;
 		}
 
 		& * {
 			position: absolute;
 		}
+	}
+}
+
+@keyframes fall {
+	0% {
+		animation-timing-function: ease-in;
+		opacity: 0;
+		transform: translateY(-250px);
+	}
+
+	100% {
+		opacity: 1;
+		animation-timing-function: ease-out;
+		transform: translateY(0);
+	}
+}
+
+@keyframes shift {
+	0% {
+		transform: translateX(0) translateY(0);
+	}
+
+	15% {
+		transform: translateX(-75px);
+	}
+
+	25% {
+		transform: translateX(-110px) translateY(-20px);
+	}
+
+	40% {
+		transform: translateX(-100px) translateY(-40px);
+	}
+
+	50% {
+		transform: translateX(50px) translateY(-45px);
+	}
+
+	60% {
+		transform: translateX(170px) translateY(-40px);
+	}
+
+	75% {
+		transform: translateX(180px) translateY(-20px);
+	}
+
+	85% {
+		transform: translateX(75px);
+	}
+
+	100% {
+		transform: translateX(0) translateY(0);
+	}
+}
+
+@keyframes pulse {
+	0% {
+		animation-timing-function: ease-out;
+		transform: rotate(45deg) scale(1);
+		transform-origin: center center;
+	}
+
+	10% {
+		animation-timing-function: ease-in;
+		transform: rotate(45deg) scale(0.91);
+	}
+
+	17% {
+		animation-timing-function: ease-out;
+		transform: rotate(45deg) scale(0.98);
+	}
+
+	33% {
+		animation-timing-function: ease-in;
+		transform: rotate(45deg) scale(0.87);
+	}
+
+	45% {
+		animation-timing-function: ease-out;
+		transform: rotate(45deg) scale(1);
+	}
+}
+
+@keyframes swirlBack {
+	0% {
+		opacity: 0;
+		transform: rotate(540deg) scale(0);
+	}
+
+	100% {
+		opacity: 1;
+		transform: rotate(0) scale(1);
 	}
 }

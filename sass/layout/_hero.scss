@@ -41,7 +41,7 @@
 
 			#heart {
 				right: 15%;
-				animation: fadeIn 2s ease 0s 1 normal backwards;
+				animation: fadeIn 2s ease 0.7s 1 normal backwards;
 			}
 
 			.hero__star-1 {
@@ -62,13 +62,13 @@
 			.round-1 {
 				top: 10%;
 				left: 10%;
-				animation: fall 2.5s ease 0s 1 normal backwards;
+				animation: fallBounce 2.5s ease 0s 1 normal backwards;
 			}
 			.round-2 {
 				top: 21%;
 				left: 19%;
 				fill: var(--active-color);
-				animation: fall 2s ease 0.5s 1 normal backwards;
+				animation: fallBounce 2s ease 0.5s 1 normal backwards;
 			}
 			.round-3 {
 				bottom: -2%;
@@ -79,32 +79,22 @@
 			#share {
 				top: 3%;
 				right: 0;
-				animation: fadeIn 2s ease 0s 1 normal backwards;
+				animation: fadeIn 2s ease 0.7s 1 normal backwards;
 			}
 			#play {
 				top: 26%;
 				right: 2%;
-				animation: fadeIn 2s ease 0s 1 normal backwards;
+				animation: fadeIn 2s ease 0.7s 1 normal backwards;
 			}
 			#location {
 				top: 49%;
 				right: 4%;
-				animation: fadeIn 2s ease 0s 1 normal backwards;
+				animation: fadeIn 2s ease 0.7s 1 normal backwards;
 			}
 		}
 
 		&-svg * {
 			position: absolute;
-		}
-
-		&-svg:hover {
-			.hero__ellipse {
-				animation: none;
-			}
-
-			#loudspeaker {
-				animation: none;
-			}
 		}
 	}
 
@@ -200,7 +190,7 @@
 	}
 }
 
-@keyframes fall {
+@keyframes fallBounce {
 	0% {
 		animation-timing-function: ease-in;
 		opacity: 0;

@@ -5,6 +5,7 @@ details {
 	border: 1px solid var(--main-bg-color);
 	border-radius: 45px;
 	box-shadow: 0px 5px 0px rgba(0, 0, 0, 1);
+	transition: background-color 0.5s ease-in-out;
 }
 
 details[open] {
