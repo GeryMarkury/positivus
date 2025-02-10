@@ -8,14 +8,18 @@
 
 		&:first-of-type {
 			right: -324px;
-			animation: fadeIn 2s ease 0s 1 normal backwards;
+			&.in-view {
+				animation: fadeIn 2s ease 0s 1 normal backwards;
+			}
 		}
 
 		&:nth-of-type(2) {
 			right: 8%;
 			top: 34%;
 			transform: rotate(45deg);
-			animation: shake 2s linear 0s 1 normal forwards;
+			&.in-view {
+				animation: shake 2s linear 0s 1 normal forwards;
+			}
 		}
 
 		&:last-of-type {
@@ -23,7 +27,9 @@
 			right: 18%;
 			transform: rotate(45deg);
 			fill: var(--active-color);
-			animation: shake 2s linear 0.5s 1 normal forwards;
+			&.in-view {
+				animation: shake 2s linear 0.5s 1 normal forwards;
+			}
 		}
 	}
 

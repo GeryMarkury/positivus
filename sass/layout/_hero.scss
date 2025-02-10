@@ -15,7 +15,10 @@
 
 			.hero__ellipse {
 				transform: rotate(29deg);
-				animation: squeeze 2s ease;
+
+				&.in-view {
+					animation: squeeze 2s ease;
+				}
 
 				&:first-child {
 					bottom: 12%;
@@ -36,12 +39,16 @@
 			#loudspeaker {
 				right: 17%;
 				bottom: 11%;
-				animation: wobble 2s ease 0.7s;
+				&.in-view {
+					animation: wobble 2s ease 0.7s;
+				}
 			}
 
 			#heart {
 				right: 15%;
-				animation: fadeIn 2s ease 0.7s 1 normal backwards;
+				&.in-view {
+					animation: fadeIn 2s ease 0.7s 1 normal backwards;
+				}
 			}
 
 			.hero__star-1 {
@@ -49,47 +56,63 @@
 				bottom: 9%;
 				left: 12%;
 				opacity: 0;
-				animation: swirl1 2s ease 0.7s forwards;
+				&.in-view {
+					animation: swirl1 2s ease 0.7s forwards;
+				}
 			}
 
 			.hero__star-2 {
 				bottom: -6%;
 				right: 45%;
 				opacity: 0;
-				animation: swirl 2s ease 0.7s forwards;
+				&.in-view {
+					animation: swirl 2s ease 0.7s forwards;
+				}
 			}
 
 			.round-1 {
 				top: 10%;
 				left: 10%;
-				animation: fallBounce 2.5s ease 0s 1 normal backwards;
+				&.in-view {
+					animation: fallBounce 2.5s ease 0s 1 normal backwards;
+				}
 			}
 			.round-2 {
 				top: 21%;
 				left: 19%;
 				fill: var(--active-color);
-				animation: fallBounce 2s ease 0.5s 1 normal backwards;
+				&.in-view {
+					animation: fallBounce 2s ease 0.5s 1 normal backwards;
+				}
 			}
 			.round-3 {
 				bottom: -2%;
 				right: 28%;
 				fill: var(--active-color);
-				animation: rise 2s ease 0.5s 1 normal backwards;
+				&.in-view {
+					animation: rise 2s ease 0.5s 1 normal backwards;
+				}
 			}
 			#share {
 				top: 3%;
 				right: 0;
-				animation: fadeIn 2s ease 0.7s 1 normal backwards;
+				&.in-view {
+					animation: fadeIn 2s ease 0.7s 1 normal backwards;
+				}
 			}
 			#play {
 				top: 26%;
 				right: 2%;
-				animation: fadeIn 2s ease 0.7s 1 normal backwards;
+				&.in-view {
+					animation: fadeIn 2s ease 0.7s 1 normal backwards;
+				}
 			}
 			#location {
 				top: 49%;
 				right: 4%;
-				animation: fadeIn 2s ease 0.7s 1 normal backwards;
+				&.in-view {
+					animation: fadeIn 2s ease 0.7s 1 normal backwards;
+				}
 			}
 		}
 

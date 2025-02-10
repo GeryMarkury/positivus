@@ -460,6 +460,8 @@ blockquote footer {
 .hero__container-svg .hero__ellipse {
   -webkit-transform: rotate(29deg);
           transform: rotate(29deg);
+}
+.hero__container-svg .hero__ellipse.in-view {
   -webkit-animation: squeeze 2s ease;
           animation: squeeze 2s ease;
 }
@@ -478,11 +480,15 @@ blockquote footer {
 .hero__container-svg #loudspeaker {
   right: 17%;
   bottom: 11%;
+}
+.hero__container-svg #loudspeaker.in-view {
   -webkit-animation: wobble 2s ease 0.7s;
           animation: wobble 2s ease 0.7s;
 }
 .hero__container-svg #heart {
   right: 15%;
+}
+.hero__container-svg #heart.in-view {
   -webkit-animation: fadeIn 2s ease 0.7s 1 normal backwards;
           animation: fadeIn 2s ease 0.7s 1 normal backwards;
 }
@@ -492,6 +498,8 @@ blockquote footer {
   bottom: 9%;
   left: 12%;
   opacity: 0;
+}
+.hero__container-svg .hero__star-1.in-view {
   -webkit-animation: swirl1 2s ease 0.7s forwards;
           animation: swirl1 2s ease 0.7s forwards;
 }
@@ -499,12 +507,16 @@ blockquote footer {
   bottom: -6%;
   right: 45%;
   opacity: 0;
+}
+.hero__container-svg .hero__star-2.in-view {
   -webkit-animation: swirl 2s ease 0.7s forwards;
           animation: swirl 2s ease 0.7s forwards;
 }
 .hero__container-svg .round-1 {
   top: 10%;
   left: 10%;
+}
+.hero__container-svg .round-1.in-view {
   -webkit-animation: fallBounce 2.5s ease 0s 1 normal backwards;
           animation: fallBounce 2.5s ease 0s 1 normal backwards;
 }
@@ -512,6 +524,8 @@ blockquote footer {
   top: 21%;
   left: 19%;
   fill: var(--active-color);
+}
+.hero__container-svg .round-2.in-view {
   -webkit-animation: fallBounce 2s ease 0.5s 1 normal backwards;
           animation: fallBounce 2s ease 0.5s 1 normal backwards;
 }
@@ -519,24 +533,32 @@ blockquote footer {
   bottom: -2%;
   right: 28%;
   fill: var(--active-color);
+}
+.hero__container-svg .round-3.in-view {
   -webkit-animation: rise 2s ease 0.5s 1 normal backwards;
           animation: rise 2s ease 0.5s 1 normal backwards;
 }
 .hero__container-svg #share {
   top: 3%;
   right: 0;
+}
+.hero__container-svg #share.in-view {
   -webkit-animation: fadeIn 2s ease 0.7s 1 normal backwards;
           animation: fadeIn 2s ease 0.7s 1 normal backwards;
 }
 .hero__container-svg #play {
   top: 26%;
   right: 2%;
+}
+.hero__container-svg #play.in-view {
   -webkit-animation: fadeIn 2s ease 0.7s 1 normal backwards;
           animation: fadeIn 2s ease 0.7s 1 normal backwards;
 }
 .hero__container-svg #location {
   top: 49%;
   right: 4%;
+}
+.hero__container-svg #location.in-view {
   -webkit-animation: fadeIn 2s ease 0.7s 1 normal backwards;
           animation: fadeIn 2s ease 0.7s 1 normal backwards;
 }
@@ -1072,6 +1094,8 @@ blockquote footer {
   border-radius: 50%;
   top: 17%;
   left: 18%;
+}
+.proposal__svg__head.in-view {
   -webkit-animation: shift 2s linear 1s forwards;
           animation: shift 2s linear 1s forwards;
 }
@@ -1091,6 +1115,8 @@ blockquote footer {
   bottom: 45%;
   left: 28%;
   opacity: 0;
+}
+.proposal__svg__bigStar.in-view {
   -webkit-animation: swirlBack 2s ease 1s forwards;
           animation: swirlBack 2s ease 1s forwards;
 }
@@ -1098,18 +1124,24 @@ blockquote footer {
   bottom: 33%;
   right: 31%;
   opacity: 0;
+}
+.proposal__svg__ellipse.in-view {
   -webkit-animation: fall 0.6s ease 0s forwards;
           animation: fall 0.6s ease 0s forwards;
 }
 .proposal__svg__ellipse ~ .proposal__svg__ellipse {
   bottom: 21%;
   opacity: 0;
+}
+.proposal__svg__ellipse ~ .proposal__svg__ellipse.in-view {
   -webkit-animation: fall 0.7s ease 0.2s forwards;
           animation: fall 0.7s ease 0.2s forwards;
 }
 .proposal__svg__ellipse ~ .proposal__svg__ellipse ~ .proposal__svg__ellipse {
   bottom: 10%;
   opacity: 0;
+}
+.proposal__svg__ellipse ~ .proposal__svg__ellipse ~ .proposal__svg__ellipse.in-view {
   -webkit-animation: fall 0.8s ease 0.4s forwards;
           animation: fall 0.8s ease 0.4s forwards;
 }
@@ -1119,6 +1151,8 @@ blockquote footer {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   fill: var(--active-color);
+}
+.proposal__svg__small-star.in-view {
   -webkit-animation: pulse 2s linear 0.5s 2 normal forwards;
           animation: pulse 2s linear 0.5s 2 normal forwards;
 }
@@ -1127,6 +1161,8 @@ blockquote footer {
   right: 27%;
   z-index: 1;
   opacity: 0;
+}
+.proposal__svg__star.in-view {
   -webkit-animation: swirl 2s ease 1s forwards;
           animation: swirl 2s ease 1s forwards;
 }
@@ -1473,6 +1509,8 @@ blockquote footer {
 }
 .contact__icon:first-of-type {
   right: -324px;
+}
+.contact__icon:first-of-type.in-view {
   -webkit-animation: fadeIn 2s ease 0s 1 normal backwards;
           animation: fadeIn 2s ease 0s 1 normal backwards;
 }
@@ -1481,6 +1519,8 @@ blockquote footer {
   top: 34%;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
+}
+.contact__icon:nth-of-type(2).in-view {
   -webkit-animation: shake 2s linear 0s 1 normal forwards;
           animation: shake 2s linear 0s 1 normal forwards;
 }
@@ -1490,6 +1530,8 @@ blockquote footer {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   fill: var(--active-color);
+}
+.contact__icon:last-of-type.in-view {
   -webkit-animation: shake 2s linear 0.5s 1 normal forwards;
           animation: shake 2s linear 0.5s 1 normal forwards;
 }
