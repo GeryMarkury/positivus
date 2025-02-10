@@ -5,4 +5,20 @@
 	border-radius: 14px;
 	background-color: var(--main-bg-color);
 	color: white;
+	transition: all 0.3s ease;
+	position: relative;
+	display: inline-block;
+	outline: none;
+
+	border: none;
+
+	box-shadow: 0 5px var(--main-text-color);
+}
+.button:hover {
+	box-shadow: 0 3px var(--main-text-color);
+	top: 1px;
+}
+.button:active {
+	box-shadow: 0 0 var(--main-text-color);
+	top: 5px;
 }

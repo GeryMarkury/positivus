@@ -144,6 +144,26 @@ button {
   border-radius: 14px;
   background-color: var(--main-bg-color);
   color: white;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border: none;
+  -webkit-box-shadow: 0 5px var(--main-text-color);
+          box-shadow: 0 5px var(--main-text-color);
+}
+
+.button:hover, .footer__btn:hover, .contact__btn:hover, .team__btn:hover, .header__btn:hover {
+  -webkit-box-shadow: 0 3px var(--main-text-color);
+          box-shadow: 0 3px var(--main-text-color);
+  top: 1px;
+}
+
+.button:active, .footer__btn:active, .contact__btn:active, .team__btn:active, .header__btn:active {
+  -webkit-box-shadow: 0 0 var(--main-text-color);
+          box-shadow: 0 0 var(--main-text-color);
+  top: 5px;
 }
 
 details {
@@ -1019,6 +1039,14 @@ blockquote footer {
   border-radius: 45px;
   -webkit-box-shadow: 0px 5px 0px rgb(0, 0, 0);
           box-shadow: 0px 5px 0px rgb(0, 0, 0);
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+.services__item:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 .services__item div h3 span {
   font-size: var(--h3-font-size);
@@ -1064,6 +1092,14 @@ blockquote footer {
 }
 .services__btn__svg {
   fill: var(--active-color);
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+.services__btn:hover .services__btn__svg {
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
 }
 
 .proposal__bg {

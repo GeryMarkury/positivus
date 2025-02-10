@@ -42,6 +42,11 @@
 		border: 1px solid var(--main-bg-color);
 		border-radius: 45px;
 		box-shadow: 0px 5px 0px rgba(0, 0, 0, 1);
+		transition: transform 0.3s ease-in-out;
+	}
+
+	&__item:hover {
+		transform: scale(1.05);
 	}
 
 	&__item div h3 span {
@@ -77,6 +82,11 @@
 
 		&__svg {
 			fill: var(--active-color);
+			transition: transform 0.3s ease-in-out;
+		}
+
+		&:hover &__svg {
+			transform: rotate(30deg);
 		}
 	}
 }
