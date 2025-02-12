@@ -13,42 +13,79 @@
 			position: relative;
 			max-width: 600px;
 
-			.hero__ellipse {
-				transform: rotate(29deg);
-
-				&.in-view {
+			&.in-view {
+				.hero__ellipse-1,
+				.hero__ellipse-2,
+				.hero__ellipse-3 {
 					animation: squeeze 2s ease;
 				}
 
-				&:first-child {
-					bottom: 12%;
-					right: 7%;
+				.hero__star-1 {
+					animation: swirl1 2s ease 0.7s forwards;
 				}
 
-				&:nth-child(2) {
-					bottom: 20%;
-					right: 3%;
+				.hero__star-2 {
+					animation: swirl 2s ease 0.7s forwards;
 				}
 
-				&:nth-child(3) {
-					bottom: 28%;
-					right: 0;
+				.round-1 {
+					animation: fallBounce 2.5s ease 0s 1 normal backwards;
 				}
+
+				.round-2 {
+					animation: fallBounce 2s ease 0.5s 1 normal backwards;
+				}
+
+				.round-3 {
+					animation: rise 2s ease 0.5s 1 normal backwards;
+				}
+
+				#share {
+					animation: fadeIn 2s ease 0.7s 1 normal backwards;
+				}
+
+				#play {
+					animation: fadeIn 2s ease 0.7s 1 normal backwards;
+				}
+
+				#location {
+					animation: fadeIn 2s ease 0.7s 1 normal backwards;
+				}
+
+				#loudspeaker {
+					animation: wobble 2s ease 0.7s;
+				}
+
+				#heart {
+					animation: fadeIn 2s ease 0.7s 1 normal backwards;
+				}
+			}
+
+			.hero__ellipse-1 {
+				transform: rotate(29deg);
+				bottom: 12%;
+				right: 7%;
+			}
+
+			.hero__ellipse-2 {
+				transform: rotate(29deg);
+				bottom: 20%;
+				right: 3%;
+			}
+
+			.hero__ellipse-3 {
+				transform: rotate(29deg);
+				bottom: 28%;
+				right: 0;
 			}
 
 			#loudspeaker {
 				right: 17%;
 				bottom: 11%;
-				&.in-view {
-					animation: wobble 2s ease 0.7s;
-				}
 			}
 
 			#heart {
 				right: 15%;
-				&.in-view {
-					animation: fadeIn 2s ease 0.7s 1 normal backwards;
-				}
 			}
 
 			.hero__star-1 {
@@ -56,63 +93,39 @@
 				bottom: 9%;
 				left: 12%;
 				opacity: 0;
-				&.in-view {
-					animation: swirl1 2s ease 0.7s forwards;
-				}
 			}
 
 			.hero__star-2 {
 				bottom: -6%;
 				right: 45%;
 				opacity: 0;
-				&.in-view {
-					animation: swirl 2s ease 0.7s forwards;
-				}
 			}
 
 			.round-1 {
 				top: 10%;
 				left: 10%;
-				&.in-view {
-					animation: fallBounce 2.5s ease 0s 1 normal backwards;
-				}
 			}
 			.round-2 {
 				top: 21%;
 				left: 19%;
 				fill: var(--active-color);
-				&.in-view {
-					animation: fallBounce 2s ease 0.5s 1 normal backwards;
-				}
 			}
 			.round-3 {
 				bottom: -2%;
 				right: 28%;
 				fill: var(--active-color);
-				&.in-view {
-					animation: rise 2s ease 0.5s 1 normal backwards;
-				}
 			}
 			#share {
 				top: 3%;
 				right: 0;
-				&.in-view {
-					animation: fadeIn 2s ease 0.7s 1 normal backwards;
-				}
 			}
 			#play {
 				top: 26%;
 				right: 2%;
-				&.in-view {
-					animation: fadeIn 2s ease 0.7s 1 normal backwards;
-				}
 			}
 			#location {
 				top: 49%;
 				right: 4%;
-				&.in-view {
-					animation: fadeIn 2s ease 0.7s 1 normal backwards;
-				}
 			}
 		}
 

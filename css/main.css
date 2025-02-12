@@ -477,23 +477,67 @@ blockquote footer {
   position: relative;
   max-width: 600px;
 }
-.hero__container-svg .hero__ellipse {
-  -webkit-transform: rotate(29deg);
-          transform: rotate(29deg);
-}
-.hero__container-svg .hero__ellipse.in-view {
+.hero__container-svg.in-view .hero__ellipse-1,
+.hero__container-svg.in-view .hero__ellipse-2,
+.hero__container-svg.in-view .hero__ellipse-3 {
   -webkit-animation: squeeze 2s ease;
           animation: squeeze 2s ease;
 }
-.hero__container-svg .hero__ellipse:first-child {
+.hero__container-svg.in-view .hero__star-1 {
+  -webkit-animation: swirl1 2s ease 0.7s forwards;
+          animation: swirl1 2s ease 0.7s forwards;
+}
+.hero__container-svg.in-view .hero__star-2 {
+  -webkit-animation: swirl 2s ease 0.7s forwards;
+          animation: swirl 2s ease 0.7s forwards;
+}
+.hero__container-svg.in-view .round-1 {
+  -webkit-animation: fallBounce 2.5s ease 0s 1 normal backwards;
+          animation: fallBounce 2.5s ease 0s 1 normal backwards;
+}
+.hero__container-svg.in-view .round-2 {
+  -webkit-animation: fallBounce 2s ease 0.5s 1 normal backwards;
+          animation: fallBounce 2s ease 0.5s 1 normal backwards;
+}
+.hero__container-svg.in-view .round-3 {
+  -webkit-animation: rise 2s ease 0.5s 1 normal backwards;
+          animation: rise 2s ease 0.5s 1 normal backwards;
+}
+.hero__container-svg.in-view #share {
+  -webkit-animation: fadeIn 2s ease 0.7s 1 normal backwards;
+          animation: fadeIn 2s ease 0.7s 1 normal backwards;
+}
+.hero__container-svg.in-view #play {
+  -webkit-animation: fadeIn 2s ease 0.7s 1 normal backwards;
+          animation: fadeIn 2s ease 0.7s 1 normal backwards;
+}
+.hero__container-svg.in-view #location {
+  -webkit-animation: fadeIn 2s ease 0.7s 1 normal backwards;
+          animation: fadeIn 2s ease 0.7s 1 normal backwards;
+}
+.hero__container-svg.in-view #loudspeaker {
+  -webkit-animation: wobble 2s ease 0.7s;
+          animation: wobble 2s ease 0.7s;
+}
+.hero__container-svg.in-view #heart {
+  -webkit-animation: fadeIn 2s ease 0.7s 1 normal backwards;
+          animation: fadeIn 2s ease 0.7s 1 normal backwards;
+}
+.hero__container-svg .hero__ellipse-1 {
+  -webkit-transform: rotate(29deg);
+          transform: rotate(29deg);
   bottom: 12%;
   right: 7%;
 }
-.hero__container-svg .hero__ellipse:nth-child(2) {
+.hero__container-svg .hero__ellipse-2 {
+  -webkit-transform: rotate(29deg);
+          transform: rotate(29deg);
   bottom: 20%;
   right: 3%;
 }
-.hero__container-svg .hero__ellipse:nth-child(3) {
+.hero__container-svg .hero__ellipse-3 {
+  -webkit-transform: rotate(29deg);
+          transform: rotate(29deg);
   bottom: 28%;
   right: 0;
 }
@@ -501,16 +545,8 @@ blockquote footer {
   right: 17%;
   bottom: 11%;
 }
-.hero__container-svg #loudspeaker.in-view {
-  -webkit-animation: wobble 2s ease 0.7s;
-          animation: wobble 2s ease 0.7s;
-}
 .hero__container-svg #heart {
   right: 15%;
-}
-.hero__container-svg #heart.in-view {
-  -webkit-animation: fadeIn 2s ease 0.7s 1 normal backwards;
-          animation: fadeIn 2s ease 0.7s 1 normal backwards;
 }
 .hero__container-svg .hero__star-1 {
   -webkit-transform: rotate(45deg);
@@ -519,68 +555,36 @@ blockquote footer {
   left: 12%;
   opacity: 0;
 }
-.hero__container-svg .hero__star-1.in-view {
-  -webkit-animation: swirl1 2s ease 0.7s forwards;
-          animation: swirl1 2s ease 0.7s forwards;
-}
 .hero__container-svg .hero__star-2 {
   bottom: -6%;
   right: 45%;
   opacity: 0;
 }
-.hero__container-svg .hero__star-2.in-view {
-  -webkit-animation: swirl 2s ease 0.7s forwards;
-          animation: swirl 2s ease 0.7s forwards;
-}
 .hero__container-svg .round-1 {
   top: 10%;
   left: 10%;
-}
-.hero__container-svg .round-1.in-view {
-  -webkit-animation: fallBounce 2.5s ease 0s 1 normal backwards;
-          animation: fallBounce 2.5s ease 0s 1 normal backwards;
 }
 .hero__container-svg .round-2 {
   top: 21%;
   left: 19%;
   fill: var(--active-color);
 }
-.hero__container-svg .round-2.in-view {
-  -webkit-animation: fallBounce 2s ease 0.5s 1 normal backwards;
-          animation: fallBounce 2s ease 0.5s 1 normal backwards;
-}
 .hero__container-svg .round-3 {
   bottom: -2%;
   right: 28%;
   fill: var(--active-color);
 }
-.hero__container-svg .round-3.in-view {
-  -webkit-animation: rise 2s ease 0.5s 1 normal backwards;
-          animation: rise 2s ease 0.5s 1 normal backwards;
-}
 .hero__container-svg #share {
   top: 3%;
   right: 0;
-}
-.hero__container-svg #share.in-view {
-  -webkit-animation: fadeIn 2s ease 0.7s 1 normal backwards;
-          animation: fadeIn 2s ease 0.7s 1 normal backwards;
 }
 .hero__container-svg #play {
   top: 26%;
   right: 2%;
 }
-.hero__container-svg #play.in-view {
-  -webkit-animation: fadeIn 2s ease 0.7s 1 normal backwards;
-          animation: fadeIn 2s ease 0.7s 1 normal backwards;
-}
 .hero__container-svg #location {
   top: 49%;
   right: 4%;
-}
-.hero__container-svg #location.in-view {
-  -webkit-animation: fadeIn 2s ease 0.7s 1 normal backwards;
-          animation: fadeIn 2s ease 0.7s 1 normal backwards;
 }
 .hero__container-svg * {
   position: absolute;
