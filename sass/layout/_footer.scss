@@ -49,7 +49,27 @@
 		grid-template-columns: repeat(5, auto);
 		gap: 40px;
 		justify-items: center;
-		text-decoration: underline;
+
+		&-item {
+			position: relative;
+		}
+
+		&-item::before {
+			content: "";
+			width: 100%;
+			height: 1.5px;
+			position: absolute;
+			left: 0;
+			bottom: 13px;
+			transition: 0.5s transform ease;
+			transform: scale3d(0, 1, 1);
+			transform-origin: 50% 50%;
+			background: #fff;
+		}
+
+		&-item:hover::before {
+			transform: scale3d(1, 1, 1);
+		}
 	}
 
 	&__icon {

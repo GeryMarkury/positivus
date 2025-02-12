@@ -15,5 +15,13 @@
 		gap: 40px;
 		align-content: center;
 		font-size: var(--h4-font-size);
+
+		&-item {
+			transition: transform 0.3s ease-in-out;
+
+			&:hover {
+				transform: scale(1.05);
+			}
+		}
 	}
 }
