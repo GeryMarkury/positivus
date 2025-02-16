@@ -1007,10 +1007,17 @@ blockquote footer {
 .clients__img {
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out, -webkit-filter 0.3s;
+  transition: -webkit-transform 0.3s ease-in-out, -webkit-filter 0.3s;
+  transition: transform 0.3s ease-in-out, filter 0.3s;
+  transition: transform 0.3s ease-in-out, filter 0.3s, -webkit-transform 0.3s ease-in-out, -webkit-filter 0.3s;
 }
 .clients__img:hover {
   -webkit-filter: none;
           filter: none;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 .clients__list {
   display: grid;

@@ -1,10 +1,15 @@
 .clients {
 	&__img {
 		filter: grayscale(100%);
+		cursor: pointer;
+		transition:
+			transform 0.3s ease-in-out,
+			filter 0.3s;
 	}
 
 	&__img:hover {
 		filter: none;
+		transform: scale(1.05);
 	}
 
 	&__list {
