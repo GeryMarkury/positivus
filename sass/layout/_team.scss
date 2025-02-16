@@ -56,9 +56,6 @@
 		fill: var(--active-color);
 	}
 
-	&__icon:hover {
-		fill: white;
-	}
 	&__icons-circle {
 		position: absolute;
 		top: 40px;
@@ -71,6 +68,17 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		transition:
+			background-color 0.3s,
+			fill 0.3s;
+	}
+
+	&__icons-circle:hover {
+		background-color: var(--active-color);
+	}
+
+	&__icons-circle:hover &__icon {
+		fill: black;
 	}
 
 	&__btn-container {
