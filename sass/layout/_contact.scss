@@ -96,7 +96,8 @@
 		outline: 2px solid transparent;
 		transition: outline-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-		&:focus {
+		&:focus,
+		&:hover {
 			outline-color: var(--active-color);
 		}
 
